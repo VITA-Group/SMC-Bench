@@ -1,4 +1,4 @@
-# Sparsity May Cry Benchmark - SMC-Bench
+# Sparsity May Cry Benchmark (SMC-Bench)
 
 Official PyTorch implementation of **SMC-Bench**, from the following paper: 
 
@@ -28,5 +28,27 @@ Specifically, we consider a broad set of tasks including *commonsense reasoning,
 ## Evaluation
 
 Commonsense Reasoning
+--- 
+<p align="center">
+<img src="https://github.com/VITA-Group/SMC-Bench/blob/main/Images/Commonsense_reasoning.png" width="800" height="250">
+</p>
 
+Arithmatic Reasoning
+--- 
+<p align="center">
+<img src="https://github.com/VITA-Group/SMC-Bench/blob/main/Images/Arithmatic_reasoning.png" width="800" height="500">
+</p>
 
+Protein Property Prediction
+--- 
+<p align="center">
+<img src="https://github.com/VITA-Group/SMC-Bench/blob/main/Images/Protain_thermal_stability_prediction.png" width="800" height="250">
+</p>
+
+Multilingual Translation
+--- 
+<p align="center">
+<img src="https://github.com/VITA-Group/SMC-Bench/blob/main/Images/Multilingual_translation.png" width="800" height="250">
+</p>
+
+## We are currently working on code cleaning and document organization. Stay tuned!!!
