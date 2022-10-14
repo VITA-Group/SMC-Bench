@@ -51,4 +51,5 @@ Multilingual Translation
 <img src="https://github.com/VITA-Group/SMC-Bench/blob/main/Images/Multilingual_translation.png" width="800" height="250">
 </p>
 
-## We are currently working on code cleaning and document organization. Stay tuned!!!
+## We are currently working on code cleaning and document organization. 
+## Stay tuned!!!
