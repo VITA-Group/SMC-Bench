@@ -1,8 +1,6 @@
 # Sparsity May Cry Benchmark (SMC-Bench)
 
-Official PyTorch implementation of **SMC-Bench**, from the following paper: 
-
-Sparsity May Cry: Let Us Fail (Current) Sparse Neural Networks Together!
+Official PyTorch implementation of **SMC-Bench** - Sparsity May Cry: Let Us Fail (Current) Sparse Neural Networks Together!
 
 [Shiwei Liu](https://shiweiliuiiiiiii.github.io/), [Tianlong Chen](https://tianlong-chen.github.io/about/), [Zhenyu Zhang](https://scholar.google.com/citations?user=ZLyJRxoAAAAJ&hl=zh-CN), [Xuxi Chen](http://xxchen.site/), [Tianjin Huang](https://research.tue.nl/en/persons/tianjin-huang), [Ajay Jaiswal](https://ajay1994.github.io/), [Zhangyang Wang](https://vita-group.github.io/)
 
@@ -51,5 +49,3 @@ Multilingual Translation
 <img src="https://github.com/VITA-Group/SMC-Bench/blob/main/Images/Multilingual_translation.png" width="800" height="250">
 </p>
 
-## We are currently working on code cleaning and document organization. 
-## Stay tuned!!!
