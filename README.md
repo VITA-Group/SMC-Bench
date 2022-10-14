@@ -12,5 +12,9 @@ The "Sparsity May Cry" Benchmark (SMC-Bench) is a collection of benchmark in pur
 
 Specifically, we consider a broad set of tasks including *commonsense reasoning, arithmatic reasoning, multilingual translation, and protein prediction*, whose content spans multiple domains, requiring a vast amount of commonsense knowledge, solid mathematical and scientific background to solve. The models and datasets that we used for SMC-Bench are summarized below.
 
+--- 
+<p align="center">
+<img src="https://github.com/Shiweiliuiiiiiii/SLaK/blob/main/SLaK.png" width="500" height="300">
+</p>
 
 
