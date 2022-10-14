@@ -10,11 +10,12 @@ University of Texas at Austin, Eindhoven University of Technology
 
 The "Sparsity May Cry" Benchmark (SMC-Bench) is a collection of benchmark in pursuit of a more general evaluation and unveiling the true potential of sparse algorithms. SMC-Bench contains carefully curated 4 diverse tasks with 12 datasets, that accounts for capturing a wide-range of domain-specific knowledge. 
 
-Specifically, we consider a broad set of tasks including *commonsense reasoning, arithmatic reasoning, multilingual translation, and protein prediction*, whose content spans multiple domains, requiring a vast amount of commonsense knowledge, solid mathematical and scientific background to solve. The models and datasets that we used for SMC-Bench are summarized below.
+Specifically, we consider a broad set of tasks including *commonsense reasoning, arithmatic reasoning, multilingual translation, and protein prediction*, whose content spans multiple domains, requiring a vast amount of commonsense knowledge, solid mathematical and scientific background to solve. Note that none of the datasets in SMC-Bench has been created from scratch for the benchmark, we rely on pre-existing datasets as they have been implicitly agreed by researchers as challenging, interesting, and of high practical value.  The models and datasets that we used for SMC-Bench are summarized below. 
 
 --- 
 <p align="center">
 <img src="https://github.com/Shiweiliuiiiiiii/SLaK/blob/main/SLaK.png" width="500" height="300">
 </p>
+
 
 
