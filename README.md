@@ -1,4 +1,4 @@
-# Sparsity May Cry Benchmark (SMC-Bench)
+# [ICLR 2023] Sparsity May Cry Benchmark (SMC-Bench)
 
 Official PyTorch implementation of **SMC-Bench** - Sparsity May Cry: Let Us Fail (Current) Sparse Neural Networks Together!
 
