@@ -287,6 +287,7 @@ class Masking(object):
 
         elif 'oBERT' in sparse_init:
             self.gradual_oBERT_pruning(1-density, iteration=iteration)
+            print('initialized with oBERT')
 
         self.apply_mask()
         self.print_status()
