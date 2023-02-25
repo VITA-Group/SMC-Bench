@@ -193,9 +193,9 @@ def main(cfg: FairseqConfig) -> None:
         # save initalization only for LTH
 
         if 'LTH' in cfg.spa.sparse_init:
-            if iter == 0: initalization = deepcopy(model.state_dict())
+            if iter == 0: initialization = deepcopy(model.state_dict())
         else:
-            initalization = None
+            initialization = None
 
         # performing pruning at the beginning of each IMP iter
         mask = None
@@ -223,7 +223,7 @@ def main(cfg: FairseqConfig) -> None:
                 break
 
             # train for one epoch
-            valid_losses, should_stop = train(cfg, trainer, task, epoch_itr, mask, iter, initalization)
+            valid_losses, should_stop = train(cfg, trainer, task, epoch_itr, mask, iter, initialization)
             if should_stop:
                 break
 

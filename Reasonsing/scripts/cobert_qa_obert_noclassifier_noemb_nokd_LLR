@@ -45,7 +45,7 @@ CUDA_VISIBLE_DEVICES=0 python train_iterative_pruning.py --ddp-backend=legacy_dd
     --batch-size $MAX_SENTENCES \
     --max-update $MAX_UPDATES \
     --log-format simple --log-interval 25 \
-    --seed $SEED --sparse --sparse-init iterative_magnitude_LLR --sparse-mode static --sparsity $sparsity --imp-iters 11 --no-pruning-emb-heads
+    --seed $SEED --sparse --sparse-init iterative_magnitude_LTH --sparse-mode static --sparsity $sparsity --imp-iters 11 --no-pruning-emb-heads
 
 done
 #python examples/roberta/commonsense_qa/evaluate.py
