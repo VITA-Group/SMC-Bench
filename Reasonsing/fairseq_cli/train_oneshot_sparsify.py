@@ -341,7 +341,7 @@ def train(
                     layer_wise_sparsities.append(mask_)
 
                 model.zero_grad()
-            return layer_wise_sparsities
+        return layer_wise_sparsities
 
     if epoch_itr.epoch == 1:
         logger.info("**********Start pruning the model**********************")
