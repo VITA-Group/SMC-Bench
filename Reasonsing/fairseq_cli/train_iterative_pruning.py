@@ -130,7 +130,7 @@ def main(cfg: FairseqConfig) -> None:
     # Iterative magnitude pruning
     for iter in range(start_state, cfg.spa.imp_iters):
         logger.info('******************************************')
-        logger.info('IMP iteration'.format(iter))
+        logger.info('IMP iteration {}'.format(iter))
         logger.info('******************************************')
 
         # Load valid dataset (we load training data below, based on the latest checkpoint)
@@ -190,7 +190,7 @@ def main(cfg: FairseqConfig) -> None:
         lr = trainer.get_lr()
 
         # save initialization for LTH
-        if iter == 0 and 'LTH' in cfg.spa.sparse_init:
+        if iter == 0 and cfg.spa.sparse_init == 'LTH':
             initalization = deepcopy(model.state_dict())
 
         # performing pruning at the beginning of each IMP iter
@@ -207,7 +207,7 @@ def main(cfg: FairseqConfig) -> None:
         # cfg.checkpoint.restore_file is the model that Fairseq will automatically load at intialization
         cfg.checkpoint.restore_file = cfg.checkpoint.save_dir + "/checkpoint_best.pt"
 
-        if 'LTH' in cfg.spa.sparse_init:
+        if cfg.spa.sparse_init == 'LTH':
             # rewinding to the pre-trained weights
             logger.info('loading pretrained weights')
             trainer.model.load_state_dict(initalization)
