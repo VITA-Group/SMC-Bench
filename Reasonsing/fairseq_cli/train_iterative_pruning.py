@@ -129,8 +129,9 @@ def main(cfg: FairseqConfig) -> None:
     start_state = 0
     # Iterative magnitude pruning
     for iter in range(start_state, cfg.spa.imp_iters):
+
         logger.info('******************************************')
-        logger.info('IMP iteration {}'.format(iter))
+        logger.info('IMP iteration {}'.foamat(iter))
         logger.info('******************************************')
 
         # Load valid dataset (we load training data below, based on the latest checkpoint)
@@ -189,7 +190,7 @@ def main(cfg: FairseqConfig) -> None:
         max_epoch = cfg.optimization.max_epoch or math.inf
         lr = trainer.get_lr()
 
-        # save initialization for LTH
+        # save initialization
         if iter == 0 and cfg.spa.sparse_init == 'LTH':
             initalization = deepcopy(model.state_dict())
 
@@ -207,9 +208,9 @@ def main(cfg: FairseqConfig) -> None:
         # cfg.checkpoint.restore_file is the model that Fairseq will automatically load at intialization
         cfg.checkpoint.restore_file = cfg.checkpoint.save_dir + "/checkpoint_best.pt"
 
+        # weight rewinding
         if cfg.spa.sparse_init == 'LTH':
-            # rewinding to the pre-trained weights
-            logger.info('loading pretrained weights')
+            print('loading pretrained weights')
             trainer.model.load_state_dict(initalization)
             if mask: mask.apply_mask()
 
@@ -288,7 +289,6 @@ def train(
 ) -> Tuple[List[Optional[float]], bool]:
     """Train the model for one epoch and return validation losses."""
     # Initialize data iterator
-
     itr = epoch_itr.next_epoch_itr(
         fix_batches_to_gpus=cfg.distributed_training.fix_batches_to_gpus,
         shuffle=(epoch_itr.next_epoch_idx > cfg.dataset.curriculum),
@@ -348,14 +348,16 @@ def train(
     trainer.begin_epoch(epoch_itr.epoch)
 
     if epoch_itr.epoch == 1 and iteration > 0:
-        logger.info("'**********Start pruning **********************'")
+        logger.info("'**********Start pruning the model**********************'")
 
-        if 'oBERT' in mask.sparse_init:
+        # build masks here
+
+        if mask.sparse_init == 'oBERT_LRR':
             mask.setup_fisher_inverse(trainer, progress)
-            mask.init(model=trainer.model, train_loader=None, device=mask.device, sparse_init=mask.sparse_init,
+            mask.init(model=trainer.model, train_loader=None, device=mask.device, mode=mask.sparse_init,
                       density=(1 - mask.sparsity), iteration=iteration)
 
-            # we need to reinitialize progress functino for oBERT, otherwise no training will be run
+
             epoch_itr = trainer.get_train_iterator(
                 epoch=1, load_dataset=True)
 
@@ -418,8 +420,13 @@ def train(
 
             trainer.begin_epoch(epoch_itr.epoch)
 
+        elif mask.sparse_mode == 'oBERT':
+            mask.init(model=trainer.model, train_loader=None, device=mask.device, mode=mask.sparse_init,
+                      density=(1 - mask.sparsity))
+            mask.setup_fisher_inverse(trainer, progress)
+
         else:
-            mask.init(model=trainer.model, train_loader=None, device=mask.device, sparse_init=mask.sparse_init, density=(1 - mask.sparsity))
+            mask.init(model=trainer.model, train_loader=None, device=mask.device, mode=mask.sparse_init, density=(1 - mask.sparsity))
 
 
     valid_subsets = cfg.dataset.valid_subset.split(",")
@@ -661,7 +668,6 @@ def get_valid_stats(
             stats[cfg.checkpoint.best_checkpoint_metric],
         )
     return stats
-
 
 
 def cli_main(
