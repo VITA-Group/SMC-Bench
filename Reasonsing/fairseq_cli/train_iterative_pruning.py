@@ -191,7 +191,7 @@ def main(cfg: FairseqConfig) -> None:
         lr = trainer.get_lr()
 
         # save initialization
-        initalization = None
+
         if iter == 0 and cfg.spa.sparse_init == 'LTH':
             initalization = deepcopy(model.state_dict())
 
@@ -279,7 +279,7 @@ def should_stop_early(cfg: DictConfig, valid_loss: float) -> bool:
 
 @metrics.aggregate("train")
 def train(
-    cfg: DictConfig, trainer: Trainer, task: tasks.FairseqTask, epoch_itr, mask, iteration, initalization
+    cfg: DictConfig, trainer: Trainer, task: tasks.FairseqTask, epoch_itr, mask, iteration, initalization=None
 ) -> Tuple[List[Optional[float]], bool]:
     """Train the model for one epoch and return validation losses."""
     # Initialize data iterator
