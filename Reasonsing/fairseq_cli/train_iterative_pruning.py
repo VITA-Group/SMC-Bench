@@ -192,9 +192,10 @@ def main(cfg: FairseqConfig) -> None:
 
         # save initialization
 
-        if iter == 0 and 'LTH' in cfg.spa.sparse_init:
-            initalization = deepcopy(model.state_dict())
-
+        if 'LTH' in cfg.spa.sparse_init:
+            if iter == 0: initalization = deepcopy(model.state_dict())
+        else: 
+            initialization = None
         # performing pruning at the beginning of each IMP iter
         mask = None
         if iter != 0:
