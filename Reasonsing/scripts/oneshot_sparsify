@@ -46,7 +46,7 @@ CUDA_VISIBLE_DEVICES=0 python train_oneshot_sparsify.py --ddp-backend=legacy_ddp
     --max-update $MAX_UPDATES \
     --log-format simple --log-interval 25 --seed $SEED \
     --sparse --sparse-init oneshot_magnitude --sparse-mode DST --sparsity $sparsity  \
-    --prune magnitude --prune-rate 0.5 --growth gradient --update-frequency 500 --redistribution none --no-pruning-emb-heads
+    --prune magnitude --prune-rate 0.5 --growth gradient --update-frequency 100 --redistribution none --no-pruning-emb-heads
 
 done
 #python examples/roberta/commonsense_qa/evaluate.py
