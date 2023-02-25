@@ -315,10 +315,8 @@ def train(
         trainer.criterion.train()
 
         for i, samples in enumerate(progress):
-            print(f'number of samples in samples is {len(samples)}')
+            if i > 0: break # only using one iteration for snip. following the original setting
             for j, sample in enumerate(samples):  # delayed update loop
-                if j > 0:
-                    break
                 sample, is_dummy_batch = trainer._prepare_sample(sample)
                 loss = trainer.criterion(model, sample)
 
