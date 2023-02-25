@@ -190,9 +190,9 @@ def main(cfg: FairseqConfig) -> None:
         max_epoch = cfg.optimization.max_epoch or math.inf
         lr = trainer.get_lr()
 
-        # save initialization
-        if iter == 0 and cfg.spa.sparse_init == 'LTH':
-            initalization = deepcopy(model.state_dict())
+        # # save initialization
+        # if iter == 0 and cfg.spa.sparse_init == 'LTH':
+        #     initalization = deepcopy(model.state_dict())
 
         # performing pruning at the beginning of each IMP iter
         mask = None
@@ -209,10 +209,10 @@ def main(cfg: FairseqConfig) -> None:
         cfg.checkpoint.restore_file = cfg.checkpoint.save_dir + "/checkpoint_best.pt"
 
         # weight rewinding
-        if cfg.spa.sparse_init == 'LTH':
-            print('loading pretrained weights')
-            trainer.model.load_state_dict(initalization)
-            if mask: mask.apply_mask()
+        # if cfg.spa.sparse_init == 'LTH':
+        #     print('loading pretrained weights')
+        #     trainer.model.load_state_dict(initalization)
+        #     if mask: mask.apply_mask()
 
 
         train_meter = meters.StopwatchMeter()
