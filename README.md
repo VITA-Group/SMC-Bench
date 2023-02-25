@@ -8,6 +8,12 @@ University of Texas at Austin, Eindhoven University of Technology
 
 The "Sparsity May Cry" Benchmark (SMC-Bench) is a collection of benchmark in pursuit of a more general evaluation and unveiling the true potential of sparse algorithms. SMC-Bench contains carefully curated 4 diverse tasks with 12 datasets, that accounts for capturing a wide-range of domain-specific knowledge. 
 
+
+The benchmark organizers can be contacted at s.liu@tue.nl.
+
+Table of contents
+* [Installation](#installation-of-big-bench)
+
 --- 
 <p align="center">
 <img src="https://github.com/VITA-Group/SMC-Bench/blob/main/Images/stay-tuned.png" width="600" height="350">
@@ -54,3 +60,4 @@ Multilingual Translation
 <img src="https://github.com/VITA-Group/SMC-Bench/blob/main/Images/Multilingual_translation.png" width="800" height="250">
 </p>
 
+## Installation of BIG-bench
