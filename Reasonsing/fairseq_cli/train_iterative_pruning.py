@@ -190,9 +190,10 @@ def main(cfg: FairseqConfig) -> None:
         max_epoch = cfg.optimization.max_epoch or math.inf
         lr = trainer.get_lr()
 
-        # # save initialization
-        # if iter == 0 and cfg.spa.sparse_init == 'LTH':
-        #     initalization = deepcopy(model.state_dict())
+        # save initialization
+        initalization = None
+        if iter == 0 and cfg.spa.sparse_init == 'LTH':
+            initalization = deepcopy(model.state_dict())
 
         # performing pruning at the beginning of each IMP iter
         mask = None
@@ -208,13 +209,6 @@ def main(cfg: FairseqConfig) -> None:
         # cfg.checkpoint.restore_file is the model that Fairseq will automatically load at intialization
         cfg.checkpoint.restore_file = cfg.checkpoint.save_dir + "/checkpoint_best.pt"
 
-        # weight rewinding
-        # if cfg.spa.sparse_init == 'LTH':
-        #     print('loading pretrained weights')
-        #     trainer.model.load_state_dict(initalization)
-        #     if mask: mask.apply_mask()
-
-
         train_meter = meters.StopwatchMeter()
         train_meter.start()
         while epoch_itr.next_epoch_idx <= max_epoch:
@@ -227,7 +221,7 @@ def main(cfg: FairseqConfig) -> None:
                 break
 
             # train for one epoch
-            valid_losses, should_stop = train(cfg, trainer, task, epoch_itr, mask, iter)
+            valid_losses, should_stop = train(cfg, trainer, task, epoch_itr, mask, iter, initalization)
             if should_stop:
                 break
 
@@ -285,7 +279,7 @@ def should_stop_early(cfg: DictConfig, valid_loss: float) -> bool:
 
 @metrics.aggregate("train")
 def train(
-    cfg: DictConfig, trainer: Trainer, task: tasks.FairseqTask, epoch_itr, mask, iteration
+    cfg: DictConfig, trainer: Trainer, task: tasks.FairseqTask, epoch_itr, mask, iteration, initalization
 ) -> Tuple[List[Optional[float]], bool]:
     """Train the model for one epoch and return validation losses."""
     # Initialize data iterator
@@ -427,6 +421,14 @@ def train(
 
         else:
             mask.init(model=trainer.model, train_loader=None, device=mask.device, sparse_init=mask.sparse_init, density=(1 - mask.sparsity))
+
+
+        # weight rewinding after pruning
+        if cfg.spa.sparse_init == 'LTH':
+            assert initalization != None
+            print('loading pretrained weights')
+            trainer.model.load_state_dict(initalization)
+            mask.apply_mask()
 
 
     valid_subsets = cfg.dataset.valid_subset.split(",")
