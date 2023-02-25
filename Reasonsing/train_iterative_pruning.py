@@ -7,7 +7,7 @@
 Legacy entry point. Use fairseq_cli/train.py or fairseq-train instead.
 """
 
-from fairseq_cli.train_IMP_new import cli_main
+from fairseq_cli.train_iterative_pruning import cli_main
 
 
 if __name__ == "__main__":
