@@ -352,7 +352,7 @@ def train(
 
         if 'oBERT' in mask.sparse_init:
             mask.setup_fisher_inverse(trainer, progress)
-            mask.init(model=trainer.model, train_loader=None, device=mask.device, mode=mask.sparse_init,
+            mask.init(model=trainer.model, train_loader=None, device=mask.device, sparse_init=mask.sparse_init,
                       density=(1 - mask.sparsity), iteration=iteration)
 
             # we need to reinitialize progress functino for oBERT, otherwise no training will be run
