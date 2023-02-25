@@ -25,7 +25,7 @@ DATA_DIR=/home/sliu/Projects/fairseq/data/CommonsenseQA
 # the examples/roberta/commonsense_qa directory:
 FAIRSEQ_PATH=/home/sliu/Projects/fairseq
 FAIRSEQ_USER_DIR=${FAIRSEQ_PATH}/examples/roberta/commonsense_qa
-for sparsity in 0.2
+for sparsity in 0.2 0.36 0.488 0.590 0.672 0.738 0.791 0.8325 0.866 0.893
 do
 save_dir=~/project_space/SMC-Bench//github/$sparsity
 CUDA_VISIBLE_DEVICES=0 python train_oneshot_sparsify.py --ddp-backend=legacy_ddp \
@@ -44,8 +44,9 @@ CUDA_VISIBLE_DEVICES=0 python train_oneshot_sparsify.py --ddp-backend=legacy_ddp
     --warmup-updates $WARMUP_UPDATES --total-num-update $MAX_UPDATES \
     --batch-size $MAX_SENTENCES \
     --max-update $MAX_UPDATES \
-    --log-format simple --log-interval 25 \
-    --seed $SEED --sparse --sparse-init snip --sparse-mode static --sparsity $sparsity --imp-iters 11 --no-pruning-emb-heads
+    --log-format simple --log-interval 25 --seed $SEED \
+    --sparse --sparse-init snip --sparse_mode DST --sparsity $sparsity  \
+    --prune magnitude --prune-rate 0.5 --growth gradient --update-frequency 500 --redistribution none --no-pruning-emb-heads
 
 done
 #python examples/roberta/commonsense_qa/evaluate.py

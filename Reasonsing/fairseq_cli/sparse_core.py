@@ -194,45 +194,6 @@ class Masking(object):
                 if name not in self.masks: continue
                 self.masks[name] = torch.ones_like(weight, dtype=torch.float32, requires_grad=False).to(device)
 
-        elif sparse_init == 'omp':
-            print('initialize by one-shot magnitude pruning')
-            self.baseline_nonzero = 0   
-
-            weight_abs = []
-            for name, weight in model.named_parameters():
-                if name not in self.masks: continue
-                weight_abs.append(torch.abs(weight))
-
-            # Gather all scores in a single vector and normalise
-            all_scores = torch.cat([torch.flatten(x) for x in weight_abs])
-            num_params_to_keep = int(len(all_scores) * density)
-
-            threshold, _ = torch.topk(all_scores, num_params_to_keep, sorted=True)
-            acceptable_score = threshold[-1]
-
-            for name, weight in model.named_parameters():
-                if name not in self.masks: continue
-                self.masks[name] = ((torch.abs(weight)) > acceptable_score).float().data.to(device)
-
-        elif sparse_init == 'omp_cpu':
-            print('initialize by one-shot magnitude pruning (cpu)')
-            self.baseline_nonzero = 0   
-
-            weight_abs = []
-            for name, weight in model.named_parameters():
-                if name not in self.masks: continue
-                weight_abs.append(torch.abs(weight.cpu()))
-
-            # Gather all scores in a single vector and normalise
-            all_scores = torch.cat([torch.flatten(x) for x in weight_abs])
-            num_params_to_keep = int(len(all_scores) * density)
-
-            threshold, _ = torch.topk(all_scores, num_params_to_keep, sorted=True)
-            acceptable_score = threshold[-1]
-
-            for name, weight in model.named_parameters():
-                if name not in self.masks: continue
-                self.masks[name] = ((torch.abs(weight)) > acceptable_score).float().data.to(device)
 
         elif sparse_init == 'random':
             print('initialize by random pruning')
@@ -273,6 +234,46 @@ class Masking(object):
                     if name not in self.masks: continue
                     self.masks[name] = ((torch.abs(weight)) > acceptable_score).float().data.to(device)
 
+        elif 'oneshot_magnitude' in sparse_init:
+            print('initialize by one-shot magnitude pruning')
+            self.baseline_nonzero = 0
+
+            weight_abs = []
+            for name, weight in model.named_parameters():
+                if name not in self.masks: continue
+                weight_abs.append(torch.abs(weight))
+
+            # Gather all scores in a single vector and normalise
+            all_scores = torch.cat([torch.flatten(x) for x in weight_abs])
+            num_params_to_keep = int(len(all_scores) * density)
+
+            threshold, _ = torch.topk(all_scores, num_params_to_keep, sorted=True)
+            acceptable_score = threshold[-1]
+
+            for name, weight in model.named_parameters():
+                if name not in self.masks: continue
+                self.masks[name] = ((torch.abs(weight)) > acceptable_score).float().data.to(device)
+
+        elif sparse_init == 'oneshot_magnitude_cpu':
+            print('initialize by one-shot magnitude pruning (cpu)')
+            self.baseline_nonzero = 0
+
+            weight_abs = []
+            for name, weight in model.named_parameters():
+                if name not in self.masks: continue
+                weight_abs.append(torch.abs(weight.cpu()))
+
+            # Gather all scores in a single vector and normalise
+            all_scores = torch.cat([torch.flatten(x) for x in weight_abs])
+            num_params_to_keep = int(len(all_scores) * density)
+
+            threshold, _ = torch.topk(all_scores, num_params_to_keep, sorted=True)
+            acceptable_score = threshold[-1]
+
+            for name, weight in model.named_parameters():
+                if name not in self.masks: continue
+                self.masks[name] = ((torch.abs(weight)) > acceptable_score).float().data.to(device)
+
         elif sparse_init == 'uniform':
             print('initialized with uniform')
             self.baseline_nonzero = 0
@@ -285,9 +286,13 @@ class Masking(object):
                 self.masks[name][:] = (torch.rand(weight.shape) < density).float().data.to(device)
                 self.baseline_nonzero += weight.numel()*density
 
-        elif 'iterative_oBERT' in sparse_init:
-            self.gradual_oBERT_pruning(1-density, iteration=iteration)
-            print('initialized with iterative oBERT')
+        elif 'oBERT' in sparse_init:
+            if 'iterative' in sparse_init:
+                print('initialized with iterative oBERT')
+                self.oBERT_pruning(1-density, iteration=iteration)
+            else:
+                print('initialized with oneshot oBERT')
+                self.oBERT_pruning(1 - density, iteration=1)
 
         self.apply_mask()
         self.print_status()
@@ -354,13 +359,6 @@ class Masking(object):
                 print('*********************************Gradual Magnitude Pruning cpu in case of OOM***********************')
                 current_prune_rate = self.gradual_pruning_rate(self.steps, 0.0, self.sparsity, self.initial_prune_time, self.final_prune_time)
                 self.gradual_magnitude_pruning(current_prune_rate, cpu=True)
-                self.print_status()
-
-        elif self.sparse_mode == 'oBERT':
-            if self.steps >= self.initial_prune_time and self.steps < self.final_prune_time and self.steps % self.update_frequency == 0:
-                print('*********************************Gradual oBERT Pruning***********************')
-                current_prune_rate = self.gradual_pruning_rate(self.steps, 0.0, self.sparsity, self.initial_prune_time, self.final_prune_time)
-                self.gradual_oBERT_pruning(current_prune_rate)
                 self.print_status()
 
         elif self.sparse_mode == 'DST':
@@ -503,7 +501,7 @@ class Masking(object):
                 self.masks[name] = ((torch.abs(weight)) > acceptable_score).float().data.to(self.device)
         self.apply_mask()
 
-    def gradual_oBERT_pruning(self, current_pruning_rate, iteration=0):
+    def oBERT_pruning(self, current_pruning_rate, iteration=1):
         '''
         Args:
             current_pruning_rate: pruning rate of the current pruning step
@@ -557,7 +555,6 @@ class Masking(object):
             if name not in self.masks: continue
             self.masks[name] = (oBERTR_scores[layer_index] > acceptable_score).float().data.to(self.device)
             layer_index += 1
-        self.apply_mask()
 
 
     def setup_fisher_inverse(self, trainer, progress):
@@ -568,5 +565,3 @@ class Masking(object):
         self._damp = 1e-07
         for name in self.masks:
             self._finvs.append(EmpiricalBlockFisherInverse(self._num_grads, self._fisher_block_size, self.masks[name].numel(), self._damp, self.device))
-
-        # self.gradual_oBERT_pruning()
