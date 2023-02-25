@@ -131,7 +131,7 @@ def main(cfg: FairseqConfig) -> None:
     for iter in range(start_state, cfg.spa.imp_iters):
 
         logger.info('******************************************')
-        logger.info('IMP iteration {}'.foamat(iter))
+        logger.info('IMP iteration {}'.format(iter))
         logger.info('******************************************')
 
         # Load valid dataset (we load training data below, based on the latest checkpoint)
