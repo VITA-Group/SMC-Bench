@@ -241,8 +241,8 @@ class Masking(object):
                 if name not in self.masks: continue
                 self.masks[name] = (torch.rand(weight.shape) < density).float().data.to(device)
 
-        elif 'imp' in sparse_init:
-            print('initialized by iterative_gm')
+        elif 'LTH' in sparse_init:
+            print('initialized by LTH')
             total_num_nonzoros = 0
             dense_nonzeros = 0
             for name, weight in model.named_parameters():
