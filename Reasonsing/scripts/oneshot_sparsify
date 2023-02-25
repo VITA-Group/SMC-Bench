@@ -45,7 +45,7 @@ CUDA_VISIBLE_DEVICES=0 python train_oneshot_sparsify.py --ddp-backend=legacy_ddp
     --batch-size $MAX_SENTENCES \
     --max-update $MAX_UPDATES \
     --log-format simple --log-interval 25 --seed $SEED \
-    --sparse --sparse-init oneshot_oBERT --sparse-mode static --sparsity $sparsity  \
+    --sparse-init oneshot_oBERT --sparse-mode static --sparsity $sparsity  \
     --prune magnitude --prune-rate 0.5 --growth gradient --update-frequency 100 --redistribution none --no-pruning-emb-heads
 
 done
