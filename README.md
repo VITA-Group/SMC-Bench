@@ -61,3 +61,5 @@ Multilingual Translation
 </p>
 
 ## Installation of BIG-bench
+Please check INSTALL.md for installation instructinos.
+
