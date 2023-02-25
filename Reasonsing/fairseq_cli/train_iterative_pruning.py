@@ -192,7 +192,7 @@ def main(cfg: FairseqConfig) -> None:
 
         # save initialization
 
-        if iter == 0 and cfg.spa.sparse_init == 'LTH':
+        if iter == 0 and 'LTH' in cfg.spa.sparse_init:
             initalization = deepcopy(model.state_dict())
 
         # performing pruning at the beginning of each IMP iter
@@ -346,12 +346,12 @@ def train(
 
         # build masks here
 
-        if mask.sparse_init == 'oBERT_LRR':
+        if 'iterative_oBERT' in mask.sparse_init:
             mask.setup_fisher_inverse(trainer, progress)
             mask.init(model=trainer.model, train_loader=None, device=mask.device, sparse_init=mask.sparse_init,
                       density=(1 - mask.sparsity), iteration=iteration)
 
-
+            # we need to reinitialize data loader for oBERT pruning, otherwise no training steps
             epoch_itr = trainer.get_train_iterator(
                 epoch=1, load_dataset=True)
 
@@ -414,17 +414,13 @@ def train(
 
             trainer.begin_epoch(epoch_itr.epoch)
 
-        elif mask.sparse_mode == 'oBERT':
-            mask.init(model=trainer.model, train_loader=None, device=mask.device, sparse_init=mask.sparse_init,
-                      density=(1 - mask.sparsity))
-            mask.setup_fisher_inverse(trainer, progress)
 
         else:
             mask.init(model=trainer.model, train_loader=None, device=mask.device, sparse_init=mask.sparse_init, density=(1 - mask.sparsity))
 
 
         # weight rewinding after pruning
-        if cfg.spa.sparse_init == 'LTH':
+        if 'LTH' in cfg.spa.sparse_init:
             assert initalization != None
             print('loading pretrained weights')
             trainer.model.load_state_dict(initalization)

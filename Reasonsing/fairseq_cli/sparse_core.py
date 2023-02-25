@@ -241,8 +241,8 @@ class Masking(object):
                 if name not in self.masks: continue
                 self.masks[name] = (torch.rand(weight.shape) < density).float().data.to(device)
 
-        elif 'LTH' in sparse_init:
-            print('initialized by LTH')
+        elif 'iterative_magnitude' in sparse_init:
+            print('initialized by iterative_magnitude')
             total_num_nonzoros = 0
             dense_nonzeros = 0
             for name, weight in model.named_parameters():
@@ -285,9 +285,9 @@ class Masking(object):
                 self.masks[name][:] = (torch.rand(weight.shape) < density).float().data.to(device)
                 self.baseline_nonzero += weight.numel()*density
 
-        elif 'oBERT' in sparse_init:
+        elif 'iterative_oBERT' in sparse_init:
             self.gradual_oBERT_pruning(1-density, iteration=iteration)
-            print('initialized with oBERT')
+            print('initialized with iterative oBERT')
 
         self.apply_mask()
         self.print_status()
