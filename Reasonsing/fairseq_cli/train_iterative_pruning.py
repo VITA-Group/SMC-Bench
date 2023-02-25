@@ -190,12 +190,13 @@ def main(cfg: FairseqConfig) -> None:
         max_epoch = cfg.optimization.max_epoch or math.inf
         lr = trainer.get_lr()
 
-        # save initialization
+        # save initalization only for LTH
 
         if 'LTH' in cfg.spa.sparse_init:
             if iter == 0: initalization = deepcopy(model.state_dict())
-        else: 
-            initialization = None
+        else:
+            initalization = None
+
         # performing pruning at the beginning of each IMP iter
         mask = None
         if iter != 0:
