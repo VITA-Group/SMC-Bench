@@ -971,7 +971,6 @@ class Trainer(object):
 
             if mask:
                 mask.apply_mask()
-                mask.print_status()
         except FloatingPointError:
 
             self.consolidate_optimizer()
