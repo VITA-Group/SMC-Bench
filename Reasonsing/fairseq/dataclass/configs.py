@@ -1121,9 +1121,6 @@ class SparseConfig(FairseqDataclass):
     no_pruning_emb_heads: bool = field(
         default=False, metadata={"help": "Do not prune embedding layers and the classification head."}
     )
-    fix: bool = field(
-        default=False, metadata={"help": "Fixing the topology of the sparse model during fine-tuning."}
-    )
     growth: Optional[str] = field(
         default=None, metadata={"help": "the growth criterion to use for dynamic sparse training."}
     )
