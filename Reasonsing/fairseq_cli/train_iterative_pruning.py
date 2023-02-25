@@ -419,7 +419,7 @@ def train(
             trainer.begin_epoch(epoch_itr.epoch)
 
         else:
-            mask.init(model=trainer.model, train_loader=None, device=mask.device, mode=mask.sparse_init, density=(1 - mask.sparsity))
+            mask.init(model=trainer.model, train_loader=None, device=mask.device, sparse_init=mask.sparse_init, density=(1 - mask.sparsity))
 
 
     valid_subsets = cfg.dataset.valid_subset.split(",")
