@@ -1,0 +1,16 @@
+#!/bin/bash
+#SBATCH --job-name=rnn_seq2seq_svamp_full_dense
+#SBATCH -p gpu
+#SBATCH -N 1
+#SBATCH --ntasks-per-node=1
+#SBATCH --gpus-per-node=1
+#SBATCH --gpus=1
+#SBATCH -t 0-12:00:00
+#SBATCH --cpus-per-task=18
+#SBATCH -o rnn_seq2seq_svamp_full_dense.out
+
+source /home/sliu/miniconda3/etc/profile.d/conda.sh
+source activate prune_cry
+
+python -m src.main -mode train -gpu 0 -embedding roberta -emb_name roberta-base -emb1_size 768 -hidden_size 256 -depth 2 \
+ -lr 0.0002 -emb_lr 8e-6 -batch_size 4 -epochs 50 -dataset cv_svamp_augmented -full_cv -run_name run_cv_svamp_augmented_rnn

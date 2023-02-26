@@ -1,0 +1,25 @@
+#!/bin/bash
+#SBATCH --job-name=g2t_svamp_snip_before_mawps-asdiv-a_svamp_noembed
+#SBATCH -p gpu
+#SBATCH -N 1
+#SBATCH --ntasks-per-node=1
+#SBATCH --gpus-per-node=1
+#SBATCH --gpus=1
+#SBATCH -t 1-00:00:00
+#SBATCH --cpus-per-task=18
+#SBATCH -o g2t_svamp_snip_before_mawps-asdiv-a_svamp_noembed.out
+
+source /home/sliu/miniconda3/etc/profile.d/conda.sh
+source activate prune_cry
+
+for sparsity in 0.2 0.36 0.488 0.590 0.672 0.738 0.791 0.8325 0.866 0.893
+do
+saved_dir=/home/sliu/project_space/pruning_cfails/Math/g2t/mawps-asdiv-a_svamp/snip_before_noembed/$sparsity
+
+python -m src.main -mode train -gpu 0 -embedding roberta -emb_name roberta-base -embedding_size 768 -hidden_size 384 \
+-depth 2 -lr 8e-4 -emb_lr 1e-5 -batch_size 8 -epochs 50 -dataset mawps-asdiv-a_svamp -run_name graph2tree_run_mawps-asdiv-a_svamp \
+--fix --sparse_init snip --sparsity $sparsity --sparse --output_dir $saved_dir  -no-full_cv -results  --noembed
+
+rm -rf $save_dir/models/graph2tree_run_mawps-asdiv-a_svamp/model.pt
+
+done

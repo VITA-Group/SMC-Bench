@@ -1,0 +1,23 @@
+#!/bin/bash
+#SBATCH --job-name=gts_svamp_imp
+#SBATCH -p gpu
+#SBATCH -N 1
+#SBATCH --ntasks-per-node=1
+#SBATCH --gpus-per-node=1
+#SBATCH --gpus=1
+#SBATCH -t 4-00:00:00
+#SBATCH --cpus-per-task=18
+#SBATCH -o gts_svamp_imp.out
+
+source /home/sliu/miniconda3/etc/profile.d/conda.sh
+source activate prune_cry
+
+for sparsity in 0.2
+do
+saved_dir=/home/sliu/project_space/pruning_cfails/Math/gts/svamp/imp/$sparsity
+
+python -m src.main_LTH -mode train -gpu 0 -embedding roberta -emb_name roberta-base -embedding_size 768 -hidden_size 512 \
+-depth 2 -lr 0.001 -emb_lr 8e-6 -batch_size 4 -epochs 50 -dataset cv_svamp_augmented -full_cv -run_name run_cv_svamp_augmented \
+--fix --sparse_init iterative_gm --sparsity $sparsity --sparse --output_dir $saved_dir -save_model
+
+done
