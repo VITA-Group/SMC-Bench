@@ -1,0 +1,24 @@
+#!/bin/bash
+#SBATCH --job-name=gts_svamp_mawps-asdiv-a_svamp_sparsity_measure
+#SBATCH -p gpu
+#SBATCH -N 1
+#SBATCH --ntasks-per-node=1
+#SBATCH --gpus-per-node=1
+#SBATCH --gpus=1
+#SBATCH -t 3-00:00:00
+#SBATCH --cpus-per-task=18
+#SBATCH -o gts_svamp_mawps-asdiv-a_svamp_sparsity_measure.out
+
+source /home/sliu/miniconda3/etc/profile.d/conda.sh
+source activate prune_cry
+
+for sparsity in 0.36 0.672 0.8325
+do
+saved_dir=/home/sliu/project_space/pruning_cfails/Math/gts/mawps-asdiv-a_svamp/sparsity
+
+python -m src.main -mode train -gpu 0 -embedding roberta -emb_name roberta-base -embedding_size 768 -hidden_size 512 \
+-depth 2 -lr 0.001 -emb_lr 8e-6 -batch_size 8 -epochs 50 -dataset mawps-asdiv-a_svamp -run_name run_mawps-asdiv-a_svamp \
+--fix --sparse_init one_shot_gm --sparsity $sparsity --sparse --output_dir $saved_dir \
+--pretrained_dir /home/sliu/project_space/pruning_cfails/Math/gts/mawps-asdiv-a_svamp/dense/ -save_model -no-full_cv -results
+
+done
