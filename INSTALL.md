@@ -1,5 +1,14 @@
+# Installation
+
 SMC-Bench contains 4 task: Commonsense Reasoning, Arithmetic Reasoning, Multilingual Translation, and Protein Prediction. 
 
+We provide a environment.yml which can create an environment that is compatible with four tasks, on an A100 GPU with CUDA 11.3. 
+# To create an environment that is compatible with four tasks:
+```commandline
+conda env create --file=environment.yml
+```
+
+We also provide commands to specifically create environments for each task
 # Commonsense Reasoning and Multilingual Translation 
 
 Commonsense Reasoning and Multilingual Translation are highly relied on the implementation of [Fairseq](https://github.com/facebookresearch/fairseq) provied by Facebook.
@@ -20,6 +29,7 @@ pip install --editable ./
 
 ```
 
-# Arithmatic Reasoning 
+# Arithmatic Reasoning (coming soon) 
 
-Arithmetic Reasoning is implemented based on the 
+Arithmetic Reasoning is implemented based on [SVAMP](https://github.com/arkilpatel/SVAMP).
+
