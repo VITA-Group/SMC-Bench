@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b73e5e45-9a29-41dc-9d8a-91d0cb358be0" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Arithmetic_Reasoning/code/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Arithmetic_Reasoning/code/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
