@@ -6,7 +6,7 @@ Official PyTorch implementation of **SMC-Bench** - Sparsity May Cry: Let Us Fail
 
 University of Texas at Austin, Eindhoven University of Technology
 
-The "Sparsity May Cry" Benchmark (SMC-Bench) is a collection of benchmark in pursuit of a more general evaluation and unveiling the true potential of sparse algorithms. SMC-Bench contains carefully curated 4 diverse tasks with 12 datasets, that accounts for capturing a wide-range of domain-specific knowledge. 
+The "Sparsity May Cry" Benchmark (SMC-Bench) is a collection of benchmark in pursuit of a more general evaluation and unveiling the true potential of sparse algorithms. SMC-Bench contains carefully curated 4 diverse tasks with 10 datasets, that accounts for capturing a wide-range of domain-specific knowledge. 
 
 
 The benchmark organizers can be contacted at s.liu@tue.nl.
