@@ -12,7 +12,8 @@ The "Sparsity May Cry" Benchmark (SMC-Bench) is a collection of benchmark in pur
 The benchmark organizers can be contacted at s.liu@tue.nl.
 
 Table of contents
-* [Installation](#installation-of-big-bench)
+* [Installation](#installation-of-smc-bench)
+* [Training](#training-of-smc-bench)
 
 --- 
 <p align="center">
@@ -60,6 +61,8 @@ Multilingual Translation
 <img src="https://github.com/VITA-Group/SMC-Bench/blob/main/Images/Multilingual_translation.png" width="800" height="250">
 </p>
 
-## Installation of BIG-bench
-Please check INSTALL.md for installation instructinos.
+## Installation of SMC-Bench   
+Please check [INSTALL.md](INSTALL.md) for installation instructinos.
 
+## Training of SMC-Bench   
+Please check [TRAINING.md](TRAINING.md) for installation instructinos.
