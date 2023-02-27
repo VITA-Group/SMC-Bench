@@ -1,0 +1,364 @@
+wandb: WARNING W&B installed but not logged in.  Run `wandb login` or set the WANDB_API_KEY env variable.
+2022-09-24 19:13:59,393 | INFO | main.py: 531 : main() ::	 Experiment Name: graph2tree_run_mawps-asdiv-a_svamp
+2022-09-24 19:13:59,393 | DEBUG | main.py: 532 : main() ::	 Created Relevant Directories
+2022-09-24 19:13:59,393 | INFO | main.py: 534 : main() ::	 Loading Data...
+2022-09-24 19:14:00,472 | DEBUG | main.py: 540 : main() ::	 Data Loaded...
+2022-09-24 19:14:00,472 | DEBUG | main.py: 542 : main() ::	 Number of Training Examples: 3138
+2022-09-24 19:14:00,472 | DEBUG | main.py: 543 : main() ::	 Number of Testing Examples: 1000
+2022-09-24 19:14:00,472 | DEBUG | main.py: 544 : main() ::	 Extra Numbers: ['0.01', '12.0', '1.0', '100.0', '0.1', '0.5', '3.0', '4.0', '7.0']
+2022-09-24 19:14:00,472 | DEBUG | main.py: 545 : main() ::	 Maximum Number of Numbers: 7
+2022-09-24 19:14:00,472 | INFO | main.py: 548 : main() ::	 Creating Vocab...
+2022-09-24 19:14:01,229 | DEBUG | pre_data.py: 611 : prepare_data() ::	 Indexed 4071 words in input language, 21 words in output
+2022-09-24 19:14:01,269 | WARNING | helper.py: 160 : get_latest_checkpoint() ::	 No Checkpoints Found
+2022-09-24 19:14:01,305 | DEBUG | main.py: 571 : main() ::	 Vocab saved at /home/sliu/project_space/pruning_cfails/Math/g2t/mawps-asdiv-a_svamp/omp_after_noembed/0.2/models/graph2tree_run_mawps-asdiv-a_svamp/vocab1.p
+2022-09-24 19:14:01,307 | DEBUG | main.py: 583 : main() ::	 Config File Saved
+2022-09-24 19:14:01,307 | INFO | main.py: 585 : main() ::	 Initializing Models...
+2022-09-24 19:14:04,157 | DEBUG | main.py: 602 : main() ::	 Models Initialized
+2022-09-24 19:14:04,157 | INFO | main.py: 605 : main() ::	 loading pretrained models from /home/sliu/project_space/pruning_cfails/Math/g2t/mawps-asdiv-a_svamp/imp/0.2/IMP_best_iter_0/models/graph2tree_run_mawps-asdiv-a_svamp.
+Traceback (most recent call last):
+  File "/home/sliu/miniconda3/envs/prune_cry/lib/python3.8/runpy.py", line 194, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/home/sliu/miniconda3/envs/prune_cry/lib/python3.8/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/gpfs/home6/sliu/Projects/SVAMP/code/graph2tree/src/main.py", line 1004, in <module>
+    main()
+  File "/gpfs/home6/sliu/Projects/SVAMP/code/graph2tree/src/main.py", line 608, in main
+    checkpoint = torch.load(ckpt_path, map_location=lambda storage, loc: storage)
+  File "/home/sliu/miniconda3/envs/prune_cry/lib/python3.8/site-packages/torch/serialization.py", line 594, in load
+    with _open_file_like(f, 'rb') as opened_file:
+  File "/home/sliu/miniconda3/envs/prune_cry/lib/python3.8/site-packages/torch/serialization.py", line 230, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+  File "/home/sliu/miniconda3/envs/prune_cry/lib/python3.8/site-packages/torch/serialization.py", line 211, in __init__
+    super(_open_file, self).__init__(open(name, mode))
+FileNotFoundError: [Errno 2] No such file or directory: '/home/sliu/project_space/pruning_cfails/Math/g2t/mawps-asdiv-a_svamp/imp/0.2/IMP_best_iter_0/models/graph2tree_run_mawps-asdiv-a_svamp/model.pt'
+Transfer numbers...
+keep_words 4068 / 4068 = 1.0000
+wandb: WARNING W&B installed but not logged in.  Run `wandb login` or set the WANDB_API_KEY env variable.
+2022-09-24 19:14:06,916 | INFO | main.py: 531 : main() ::	 Experiment Name: graph2tree_run_mawps-asdiv-a_svamp
+2022-09-24 19:14:06,916 | DEBUG | main.py: 532 : main() ::	 Created Relevant Directories
+2022-09-24 19:14:06,916 | INFO | main.py: 534 : main() ::	 Loading Data...
+2022-09-24 19:14:07,996 | DEBUG | main.py: 540 : main() ::	 Data Loaded...
+2022-09-24 19:14:07,996 | DEBUG | main.py: 542 : main() ::	 Number of Training Examples: 3138
+2022-09-24 19:14:07,996 | DEBUG | main.py: 543 : main() ::	 Number of Testing Examples: 1000
+2022-09-24 19:14:07,996 | DEBUG | main.py: 544 : main() ::	 Extra Numbers: ['0.01', '12.0', '1.0', '100.0', '0.1', '0.5', '3.0', '4.0', '7.0']
+2022-09-24 19:14:07,998 | DEBUG | main.py: 545 : main() ::	 Maximum Number of Numbers: 7
+2022-09-24 19:14:07,998 | INFO | main.py: 548 : main() ::	 Creating Vocab...
+2022-09-24 19:14:08,754 | DEBUG | pre_data.py: 611 : prepare_data() ::	 Indexed 4071 words in input language, 21 words in output
+2022-09-24 19:14:08,795 | WARNING | helper.py: 160 : get_latest_checkpoint() ::	 No Checkpoints Found
+2022-09-24 19:14:08,819 | DEBUG | main.py: 571 : main() ::	 Vocab saved at /home/sliu/project_space/pruning_cfails/Math/g2t/mawps-asdiv-a_svamp/omp_after_noembed/0.36/models/graph2tree_run_mawps-asdiv-a_svamp/vocab1.p
+2022-09-24 19:14:08,820 | DEBUG | main.py: 583 : main() ::	 Config File Saved
+2022-09-24 19:14:08,820 | INFO | main.py: 585 : main() ::	 Initializing Models...
+2022-09-24 19:14:11,761 | DEBUG | main.py: 602 : main() ::	 Models Initialized
+2022-09-24 19:14:11,761 | INFO | main.py: 605 : main() ::	 loading pretrained models from /home/sliu/project_space/pruning_cfails/Math/g2t/mawps-asdiv-a_svamp/imp/0.2/IMP_best_iter_0/models/graph2tree_run_mawps-asdiv-a_svamp.
+Traceback (most recent call last):
+  File "/home/sliu/miniconda3/envs/prune_cry/lib/python3.8/runpy.py", line 194, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/home/sliu/miniconda3/envs/prune_cry/lib/python3.8/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/gpfs/home6/sliu/Projects/SVAMP/code/graph2tree/src/main.py", line 1004, in <module>
+    main()
+  File "/gpfs/home6/sliu/Projects/SVAMP/code/graph2tree/src/main.py", line 608, in main
+    checkpoint = torch.load(ckpt_path, map_location=lambda storage, loc: storage)
+  File "/home/sliu/miniconda3/envs/prune_cry/lib/python3.8/site-packages/torch/serialization.py", line 594, in load
+    with _open_file_like(f, 'rb') as opened_file:
+  File "/home/sliu/miniconda3/envs/prune_cry/lib/python3.8/site-packages/torch/serialization.py", line 230, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+  File "/home/sliu/miniconda3/envs/prune_cry/lib/python3.8/site-packages/torch/serialization.py", line 211, in __init__
+    super(_open_file, self).__init__(open(name, mode))
+FileNotFoundError: [Errno 2] No such file or directory: '/home/sliu/project_space/pruning_cfails/Math/g2t/mawps-asdiv-a_svamp/imp/0.2/IMP_best_iter_0/models/graph2tree_run_mawps-asdiv-a_svamp/model.pt'
+Transfer numbers...
+keep_words 4068 / 4068 = 1.0000
+wandb: WARNING W&B installed but not logged in.  Run `wandb login` or set the WANDB_API_KEY env variable.
+2022-09-24 19:14:14,407 | INFO | main.py: 531 : main() ::	 Experiment Name: graph2tree_run_mawps-asdiv-a_svamp
+2022-09-24 19:14:14,407 | DEBUG | main.py: 532 : main() ::	 Created Relevant Directories
+2022-09-24 19:14:14,407 | INFO | main.py: 534 : main() ::	 Loading Data...
+2022-09-24 19:14:15,491 | DEBUG | main.py: 540 : main() ::	 Data Loaded...
+2022-09-24 19:14:15,492 | DEBUG | main.py: 542 : main() ::	 Number of Training Examples: 3138
+2022-09-24 19:14:15,492 | DEBUG | main.py: 543 : main() ::	 Number of Testing Examples: 1000
+2022-09-24 19:14:15,492 | DEBUG | main.py: 544 : main() ::	 Extra Numbers: ['0.01', '12.0', '1.0', '100.0', '0.1', '0.5', '3.0', '4.0', '7.0']
+2022-09-24 19:14:15,492 | DEBUG | main.py: 545 : main() ::	 Maximum Number of Numbers: 7
+2022-09-24 19:14:15,492 | INFO | main.py: 548 : main() ::	 Creating Vocab...
+2022-09-24 19:14:16,251 | DEBUG | pre_data.py: 611 : prepare_data() ::	 Indexed 4071 words in input language, 21 words in output
+2022-09-24 19:14:16,292 | WARNING | helper.py: 160 : get_latest_checkpoint() ::	 No Checkpoints Found
+2022-09-24 19:14:16,306 | DEBUG | main.py: 571 : main() ::	 Vocab saved at /home/sliu/project_space/pruning_cfails/Math/g2t/mawps-asdiv-a_svamp/omp_after_noembed/0.488/models/graph2tree_run_mawps-asdiv-a_svamp/vocab1.p
+2022-09-24 19:14:16,308 | DEBUG | main.py: 583 : main() ::	 Config File Saved
+2022-09-24 19:14:16,308 | INFO | main.py: 585 : main() ::	 Initializing Models...
+2022-09-24 19:14:19,462 | DEBUG | main.py: 602 : main() ::	 Models Initialized
+2022-09-24 19:14:19,462 | INFO | main.py: 605 : main() ::	 loading pretrained models from /home/sliu/project_space/pruning_cfails/Math/g2t/mawps-asdiv-a_svamp/imp/0.2/IMP_best_iter_0/models/graph2tree_run_mawps-asdiv-a_svamp.
+Traceback (most recent call last):
+  File "/home/sliu/miniconda3/envs/prune_cry/lib/python3.8/runpy.py", line 194, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/home/sliu/miniconda3/envs/prune_cry/lib/python3.8/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/gpfs/home6/sliu/Projects/SVAMP/code/graph2tree/src/main.py", line 1004, in <module>
+    main()
+  File "/gpfs/home6/sliu/Projects/SVAMP/code/graph2tree/src/main.py", line 608, in main
+    checkpoint = torch.load(ckpt_path, map_location=lambda storage, loc: storage)
+  File "/home/sliu/miniconda3/envs/prune_cry/lib/python3.8/site-packages/torch/serialization.py", line 594, in load
+    with _open_file_like(f, 'rb') as opened_file:
+  File "/home/sliu/miniconda3/envs/prune_cry/lib/python3.8/site-packages/torch/serialization.py", line 230, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+  File "/home/sliu/miniconda3/envs/prune_cry/lib/python3.8/site-packages/torch/serialization.py", line 211, in __init__
+    super(_open_file, self).__init__(open(name, mode))
+FileNotFoundError: [Errno 2] No such file or directory: '/home/sliu/project_space/pruning_cfails/Math/g2t/mawps-asdiv-a_svamp/imp/0.2/IMP_best_iter_0/models/graph2tree_run_mawps-asdiv-a_svamp/model.pt'
+Transfer numbers...
+keep_words 4068 / 4068 = 1.0000
+wandb: WARNING W&B installed but not logged in.  Run `wandb login` or set the WANDB_API_KEY env variable.
+2022-09-24 19:14:22,115 | INFO | main.py: 531 : main() ::	 Experiment Name: graph2tree_run_mawps-asdiv-a_svamp
+2022-09-24 19:14:22,115 | DEBUG | main.py: 532 : main() ::	 Created Relevant Directories
+2022-09-24 19:14:22,115 | INFO | main.py: 534 : main() ::	 Loading Data...
+2022-09-24 19:14:23,205 | DEBUG | main.py: 540 : main() ::	 Data Loaded...
+2022-09-24 19:14:23,205 | DEBUG | main.py: 542 : main() ::	 Number of Training Examples: 3138
+2022-09-24 19:14:23,205 | DEBUG | main.py: 543 : main() ::	 Number of Testing Examples: 1000
+2022-09-24 19:14:23,205 | DEBUG | main.py: 544 : main() ::	 Extra Numbers: ['0.01', '12.0', '1.0', '100.0', '0.1', '0.5', '3.0', '4.0', '7.0']
+2022-09-24 19:14:23,205 | DEBUG | main.py: 545 : main() ::	 Maximum Number of Numbers: 7
+2022-09-24 19:14:23,205 | INFO | main.py: 548 : main() ::	 Creating Vocab...
+2022-09-24 19:14:23,963 | DEBUG | pre_data.py: 611 : prepare_data() ::	 Indexed 4071 words in input language, 21 words in output
+2022-09-24 19:14:24,004 | WARNING | helper.py: 160 : get_latest_checkpoint() ::	 No Checkpoints Found
+2022-09-24 19:14:24,031 | DEBUG | main.py: 571 : main() ::	 Vocab saved at /home/sliu/project_space/pruning_cfails/Math/g2t/mawps-asdiv-a_svamp/omp_after_noembed/0.590/models/graph2tree_run_mawps-asdiv-a_svamp/vocab1.p
+2022-09-24 19:14:24,032 | DEBUG | main.py: 583 : main() ::	 Config File Saved
+2022-09-24 19:14:24,032 | INFO | main.py: 585 : main() ::	 Initializing Models...
+2022-09-24 19:14:26,855 | DEBUG | main.py: 602 : main() ::	 Models Initialized
+2022-09-24 19:14:26,855 | INFO | main.py: 605 : main() ::	 loading pretrained models from /home/sliu/project_space/pruning_cfails/Math/g2t/mawps-asdiv-a_svamp/imp/0.2/IMP_best_iter_0/models/graph2tree_run_mawps-asdiv-a_svamp.
+Traceback (most recent call last):
+  File "/home/sliu/miniconda3/envs/prune_cry/lib/python3.8/runpy.py", line 194, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/home/sliu/miniconda3/envs/prune_cry/lib/python3.8/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/gpfs/home6/sliu/Projects/SVAMP/code/graph2tree/src/main.py", line 1004, in <module>
+    main()
+  File "/gpfs/home6/sliu/Projects/SVAMP/code/graph2tree/src/main.py", line 608, in main
+    checkpoint = torch.load(ckpt_path, map_location=lambda storage, loc: storage)
+  File "/home/sliu/miniconda3/envs/prune_cry/lib/python3.8/site-packages/torch/serialization.py", line 594, in load
+    with _open_file_like(f, 'rb') as opened_file:
+  File "/home/sliu/miniconda3/envs/prune_cry/lib/python3.8/site-packages/torch/serialization.py", line 230, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+  File "/home/sliu/miniconda3/envs/prune_cry/lib/python3.8/site-packages/torch/serialization.py", line 211, in __init__
+    super(_open_file, self).__init__(open(name, mode))
+FileNotFoundError: [Errno 2] No such file or directory: '/home/sliu/project_space/pruning_cfails/Math/g2t/mawps-asdiv-a_svamp/imp/0.2/IMP_best_iter_0/models/graph2tree_run_mawps-asdiv-a_svamp/model.pt'
+Transfer numbers...
+keep_words 4068 / 4068 = 1.0000
+wandb: WARNING W&B installed but not logged in.  Run `wandb login` or set the WANDB_API_KEY env variable.
+2022-09-24 19:14:29,475 | INFO | main.py: 531 : main() ::	 Experiment Name: graph2tree_run_mawps-asdiv-a_svamp
+2022-09-24 19:14:29,475 | DEBUG | main.py: 532 : main() ::	 Created Relevant Directories
+2022-09-24 19:14:29,475 | INFO | main.py: 534 : main() ::	 Loading Data...
+2022-09-24 19:14:30,559 | DEBUG | main.py: 540 : main() ::	 Data Loaded...
+2022-09-24 19:14:30,559 | DEBUG | main.py: 542 : main() ::	 Number of Training Examples: 3138
+2022-09-24 19:14:30,559 | DEBUG | main.py: 543 : main() ::	 Number of Testing Examples: 1000
+2022-09-24 19:14:30,559 | DEBUG | main.py: 544 : main() ::	 Extra Numbers: ['0.01', '12.0', '1.0', '100.0', '0.1', '0.5', '3.0', '4.0', '7.0']
+2022-09-24 19:14:30,559 | DEBUG | main.py: 545 : main() ::	 Maximum Number of Numbers: 7
+2022-09-24 19:14:30,559 | INFO | main.py: 548 : main() ::	 Creating Vocab...
+2022-09-24 19:14:31,315 | DEBUG | pre_data.py: 611 : prepare_data() ::	 Indexed 4071 words in input language, 21 words in output
+2022-09-24 19:14:31,356 | WARNING | helper.py: 160 : get_latest_checkpoint() ::	 No Checkpoints Found
+2022-09-24 19:14:31,360 | DEBUG | main.py: 571 : main() ::	 Vocab saved at /home/sliu/project_space/pruning_cfails/Math/g2t/mawps-asdiv-a_svamp/omp_after_noembed/0.672/models/graph2tree_run_mawps-asdiv-a_svamp/vocab1.p
+2022-09-24 19:14:31,372 | DEBUG | main.py: 583 : main() ::	 Config File Saved
+2022-09-24 19:14:31,372 | INFO | main.py: 585 : main() ::	 Initializing Models...
+2022-09-24 19:14:34,241 | DEBUG | main.py: 602 : main() ::	 Models Initialized
+2022-09-24 19:14:34,242 | INFO | main.py: 605 : main() ::	 loading pretrained models from /home/sliu/project_space/pruning_cfails/Math/g2t/mawps-asdiv-a_svamp/imp/0.2/IMP_best_iter_0/models/graph2tree_run_mawps-asdiv-a_svamp.
+Traceback (most recent call last):
+  File "/home/sliu/miniconda3/envs/prune_cry/lib/python3.8/runpy.py", line 194, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/home/sliu/miniconda3/envs/prune_cry/lib/python3.8/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/gpfs/home6/sliu/Projects/SVAMP/code/graph2tree/src/main.py", line 1004, in <module>
+    main()
+  File "/gpfs/home6/sliu/Projects/SVAMP/code/graph2tree/src/main.py", line 608, in main
+    checkpoint = torch.load(ckpt_path, map_location=lambda storage, loc: storage)
+  File "/home/sliu/miniconda3/envs/prune_cry/lib/python3.8/site-packages/torch/serialization.py", line 594, in load
+    with _open_file_like(f, 'rb') as opened_file:
+  File "/home/sliu/miniconda3/envs/prune_cry/lib/python3.8/site-packages/torch/serialization.py", line 230, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+  File "/home/sliu/miniconda3/envs/prune_cry/lib/python3.8/site-packages/torch/serialization.py", line 211, in __init__
+    super(_open_file, self).__init__(open(name, mode))
+FileNotFoundError: [Errno 2] No such file or directory: '/home/sliu/project_space/pruning_cfails/Math/g2t/mawps-asdiv-a_svamp/imp/0.2/IMP_best_iter_0/models/graph2tree_run_mawps-asdiv-a_svamp/model.pt'
+Transfer numbers...
+keep_words 4068 / 4068 = 1.0000
+wandb: WARNING W&B installed but not logged in.  Run `wandb login` or set the WANDB_API_KEY env variable.
+2022-09-24 19:14:36,855 | INFO | main.py: 531 : main() ::	 Experiment Name: graph2tree_run_mawps-asdiv-a_svamp
+2022-09-24 19:14:36,855 | DEBUG | main.py: 532 : main() ::	 Created Relevant Directories
+2022-09-24 19:14:36,855 | INFO | main.py: 534 : main() ::	 Loading Data...
+2022-09-24 19:14:37,941 | DEBUG | main.py: 540 : main() ::	 Data Loaded...
+2022-09-24 19:14:37,941 | DEBUG | main.py: 542 : main() ::	 Number of Training Examples: 3138
+2022-09-24 19:14:37,941 | DEBUG | main.py: 543 : main() ::	 Number of Testing Examples: 1000
+2022-09-24 19:14:37,941 | DEBUG | main.py: 544 : main() ::	 Extra Numbers: ['0.01', '12.0', '1.0', '100.0', '0.1', '0.5', '3.0', '4.0', '7.0']
+2022-09-24 19:14:37,941 | DEBUG | main.py: 545 : main() ::	 Maximum Number of Numbers: 7
+2022-09-24 19:14:37,941 | INFO | main.py: 548 : main() ::	 Creating Vocab...
+2022-09-24 19:14:38,703 | DEBUG | pre_data.py: 611 : prepare_data() ::	 Indexed 4071 words in input language, 21 words in output
+2022-09-24 19:14:38,744 | WARNING | helper.py: 160 : get_latest_checkpoint() ::	 No Checkpoints Found
+2022-09-24 19:14:38,748 | DEBUG | main.py: 571 : main() ::	 Vocab saved at /home/sliu/project_space/pruning_cfails/Math/g2t/mawps-asdiv-a_svamp/omp_after_noembed/0.738/models/graph2tree_run_mawps-asdiv-a_svamp/vocab1.p
+2022-09-24 19:14:38,749 | DEBUG | main.py: 583 : main() ::	 Config File Saved
+2022-09-24 19:14:38,749 | INFO | main.py: 585 : main() ::	 Initializing Models...
+2022-09-24 19:14:41,597 | DEBUG | main.py: 602 : main() ::	 Models Initialized
+2022-09-24 19:14:41,597 | INFO | main.py: 605 : main() ::	 loading pretrained models from /home/sliu/project_space/pruning_cfails/Math/g2t/mawps-asdiv-a_svamp/imp/0.2/IMP_best_iter_0/models/graph2tree_run_mawps-asdiv-a_svamp.
+Traceback (most recent call last):
+  File "/home/sliu/miniconda3/envs/prune_cry/lib/python3.8/runpy.py", line 194, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/home/sliu/miniconda3/envs/prune_cry/lib/python3.8/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/gpfs/home6/sliu/Projects/SVAMP/code/graph2tree/src/main.py", line 1004, in <module>
+    main()
+  File "/gpfs/home6/sliu/Projects/SVAMP/code/graph2tree/src/main.py", line 608, in main
+    checkpoint = torch.load(ckpt_path, map_location=lambda storage, loc: storage)
+  File "/home/sliu/miniconda3/envs/prune_cry/lib/python3.8/site-packages/torch/serialization.py", line 594, in load
+    with _open_file_like(f, 'rb') as opened_file:
+  File "/home/sliu/miniconda3/envs/prune_cry/lib/python3.8/site-packages/torch/serialization.py", line 230, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+  File "/home/sliu/miniconda3/envs/prune_cry/lib/python3.8/site-packages/torch/serialization.py", line 211, in __init__
+    super(_open_file, self).__init__(open(name, mode))
+FileNotFoundError: [Errno 2] No such file or directory: '/home/sliu/project_space/pruning_cfails/Math/g2t/mawps-asdiv-a_svamp/imp/0.2/IMP_best_iter_0/models/graph2tree_run_mawps-asdiv-a_svamp/model.pt'
+Transfer numbers...
+keep_words 4068 / 4068 = 1.0000
+wandb: WARNING W&B installed but not logged in.  Run `wandb login` or set the WANDB_API_KEY env variable.
+2022-09-24 19:14:44,197 | INFO | main.py: 531 : main() ::	 Experiment Name: graph2tree_run_mawps-asdiv-a_svamp
+2022-09-24 19:14:44,197 | DEBUG | main.py: 532 : main() ::	 Created Relevant Directories
+2022-09-24 19:14:44,197 | INFO | main.py: 534 : main() ::	 Loading Data...
+2022-09-24 19:14:45,282 | DEBUG | main.py: 540 : main() ::	 Data Loaded...
+2022-09-24 19:14:45,282 | DEBUG | main.py: 542 : main() ::	 Number of Training Examples: 3138
+2022-09-24 19:14:45,282 | DEBUG | main.py: 543 : main() ::	 Number of Testing Examples: 1000
+2022-09-24 19:14:45,282 | DEBUG | main.py: 544 : main() ::	 Extra Numbers: ['0.01', '12.0', '1.0', '100.0', '0.1', '0.5', '3.0', '4.0', '7.0']
+2022-09-24 19:14:45,282 | DEBUG | main.py: 545 : main() ::	 Maximum Number of Numbers: 7
+2022-09-24 19:14:45,282 | INFO | main.py: 548 : main() ::	 Creating Vocab...
+2022-09-24 19:14:46,038 | DEBUG | pre_data.py: 611 : prepare_data() ::	 Indexed 4071 words in input language, 21 words in output
+2022-09-24 19:14:46,079 | WARNING | helper.py: 160 : get_latest_checkpoint() ::	 No Checkpoints Found
+2022-09-24 19:14:46,083 | DEBUG | main.py: 571 : main() ::	 Vocab saved at /home/sliu/project_space/pruning_cfails/Math/g2t/mawps-asdiv-a_svamp/omp_after_noembed/0.791/models/graph2tree_run_mawps-asdiv-a_svamp/vocab1.p
+2022-09-24 19:14:46,116 | DEBUG | main.py: 583 : main() ::	 Config File Saved
+2022-09-24 19:14:46,116 | INFO | main.py: 585 : main() ::	 Initializing Models...
+2022-09-24 19:14:48,949 | DEBUG | main.py: 602 : main() ::	 Models Initialized
+2022-09-24 19:14:48,949 | INFO | main.py: 605 : main() ::	 loading pretrained models from /home/sliu/project_space/pruning_cfails/Math/g2t/mawps-asdiv-a_svamp/imp/0.2/IMP_best_iter_0/models/graph2tree_run_mawps-asdiv-a_svamp.
+Traceback (most recent call last):
+  File "/home/sliu/miniconda3/envs/prune_cry/lib/python3.8/runpy.py", line 194, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/home/sliu/miniconda3/envs/prune_cry/lib/python3.8/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/gpfs/home6/sliu/Projects/SVAMP/code/graph2tree/src/main.py", line 1004, in <module>
+    main()
+  File "/gpfs/home6/sliu/Projects/SVAMP/code/graph2tree/src/main.py", line 608, in main
+    checkpoint = torch.load(ckpt_path, map_location=lambda storage, loc: storage)
+  File "/home/sliu/miniconda3/envs/prune_cry/lib/python3.8/site-packages/torch/serialization.py", line 594, in load
+    with _open_file_like(f, 'rb') as opened_file:
+  File "/home/sliu/miniconda3/envs/prune_cry/lib/python3.8/site-packages/torch/serialization.py", line 230, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+  File "/home/sliu/miniconda3/envs/prune_cry/lib/python3.8/site-packages/torch/serialization.py", line 211, in __init__
+    super(_open_file, self).__init__(open(name, mode))
+FileNotFoundError: [Errno 2] No such file or directory: '/home/sliu/project_space/pruning_cfails/Math/g2t/mawps-asdiv-a_svamp/imp/0.2/IMP_best_iter_0/models/graph2tree_run_mawps-asdiv-a_svamp/model.pt'
+Transfer numbers...
+keep_words 4068 / 4068 = 1.0000
+wandb: WARNING W&B installed but not logged in.  Run `wandb login` or set the WANDB_API_KEY env variable.
+2022-09-24 19:14:51,599 | INFO | main.py: 531 : main() ::	 Experiment Name: graph2tree_run_mawps-asdiv-a_svamp
+2022-09-24 19:14:51,599 | DEBUG | main.py: 532 : main() ::	 Created Relevant Directories
+2022-09-24 19:14:51,599 | INFO | main.py: 534 : main() ::	 Loading Data...
+2022-09-24 19:14:52,685 | DEBUG | main.py: 540 : main() ::	 Data Loaded...
+2022-09-24 19:14:52,686 | DEBUG | main.py: 542 : main() ::	 Number of Training Examples: 3138
+2022-09-24 19:14:52,686 | DEBUG | main.py: 543 : main() ::	 Number of Testing Examples: 1000
+2022-09-24 19:14:52,686 | DEBUG | main.py: 544 : main() ::	 Extra Numbers: ['0.01', '12.0', '1.0', '100.0', '0.1', '0.5', '3.0', '4.0', '7.0']
+2022-09-24 19:14:52,686 | DEBUG | main.py: 545 : main() ::	 Maximum Number of Numbers: 7
+2022-09-24 19:14:52,686 | INFO | main.py: 548 : main() ::	 Creating Vocab...
+2022-09-24 19:14:53,444 | DEBUG | pre_data.py: 611 : prepare_data() ::	 Indexed 4071 words in input language, 21 words in output
+2022-09-24 19:14:53,485 | WARNING | helper.py: 160 : get_latest_checkpoint() ::	 No Checkpoints Found
+2022-09-24 19:14:53,494 | DEBUG | main.py: 571 : main() ::	 Vocab saved at /home/sliu/project_space/pruning_cfails/Math/g2t/mawps-asdiv-a_svamp/omp_after_noembed/0.8325/models/graph2tree_run_mawps-asdiv-a_svamp/vocab1.p
+2022-09-24 19:14:53,496 | DEBUG | main.py: 583 : main() ::	 Config File Saved
+2022-09-24 19:14:53,496 | INFO | main.py: 585 : main() ::	 Initializing Models...
+2022-09-24 19:14:56,378 | DEBUG | main.py: 602 : main() ::	 Models Initialized
+2022-09-24 19:14:56,378 | INFO | main.py: 605 : main() ::	 loading pretrained models from /home/sliu/project_space/pruning_cfails/Math/g2t/mawps-asdiv-a_svamp/imp/0.2/IMP_best_iter_0/models/graph2tree_run_mawps-asdiv-a_svamp.
+Traceback (most recent call last):
+  File "/home/sliu/miniconda3/envs/prune_cry/lib/python3.8/runpy.py", line 194, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/home/sliu/miniconda3/envs/prune_cry/lib/python3.8/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/gpfs/home6/sliu/Projects/SVAMP/code/graph2tree/src/main.py", line 1004, in <module>
+    main()
+  File "/gpfs/home6/sliu/Projects/SVAMP/code/graph2tree/src/main.py", line 608, in main
+    checkpoint = torch.load(ckpt_path, map_location=lambda storage, loc: storage)
+  File "/home/sliu/miniconda3/envs/prune_cry/lib/python3.8/site-packages/torch/serialization.py", line 594, in load
+    with _open_file_like(f, 'rb') as opened_file:
+  File "/home/sliu/miniconda3/envs/prune_cry/lib/python3.8/site-packages/torch/serialization.py", line 230, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+  File "/home/sliu/miniconda3/envs/prune_cry/lib/python3.8/site-packages/torch/serialization.py", line 211, in __init__
+    super(_open_file, self).__init__(open(name, mode))
+FileNotFoundError: [Errno 2] No such file or directory: '/home/sliu/project_space/pruning_cfails/Math/g2t/mawps-asdiv-a_svamp/imp/0.2/IMP_best_iter_0/models/graph2tree_run_mawps-asdiv-a_svamp/model.pt'
+Transfer numbers...
+keep_words 4068 / 4068 = 1.0000
+wandb: WARNING W&B installed but not logged in.  Run `wandb login` or set the WANDB_API_KEY env variable.
+2022-09-24 19:14:58,981 | INFO | main.py: 531 : main() ::	 Experiment Name: graph2tree_run_mawps-asdiv-a_svamp
+2022-09-24 19:14:58,981 | DEBUG | main.py: 532 : main() ::	 Created Relevant Directories
+2022-09-24 19:14:58,981 | INFO | main.py: 534 : main() ::	 Loading Data...
+2022-09-24 19:15:00,066 | DEBUG | main.py: 540 : main() ::	 Data Loaded...
+2022-09-24 19:15:00,066 | DEBUG | main.py: 542 : main() ::	 Number of Training Examples: 3138
+2022-09-24 19:15:00,066 | DEBUG | main.py: 543 : main() ::	 Number of Testing Examples: 1000
+2022-09-24 19:15:00,066 | DEBUG | main.py: 544 : main() ::	 Extra Numbers: ['0.01', '12.0', '1.0', '100.0', '0.1', '0.5', '3.0', '4.0', '7.0']
+2022-09-24 19:15:00,066 | DEBUG | main.py: 545 : main() ::	 Maximum Number of Numbers: 7
+2022-09-24 19:15:00,066 | INFO | main.py: 548 : main() ::	 Creating Vocab...
+2022-09-24 19:15:00,829 | DEBUG | pre_data.py: 611 : prepare_data() ::	 Indexed 4071 words in input language, 21 words in output
+2022-09-24 19:15:00,871 | WARNING | helper.py: 160 : get_latest_checkpoint() ::	 No Checkpoints Found
+2022-09-24 19:15:00,875 | DEBUG | main.py: 571 : main() ::	 Vocab saved at /home/sliu/project_space/pruning_cfails/Math/g2t/mawps-asdiv-a_svamp/omp_after_noembed/0.866/models/graph2tree_run_mawps-asdiv-a_svamp/vocab1.p
+2022-09-24 19:15:00,876 | DEBUG | main.py: 583 : main() ::	 Config File Saved
+2022-09-24 19:15:00,876 | INFO | main.py: 585 : main() ::	 Initializing Models...
+2022-09-24 19:15:03,773 | DEBUG | main.py: 602 : main() ::	 Models Initialized
+2022-09-24 19:15:03,773 | INFO | main.py: 605 : main() ::	 loading pretrained models from /home/sliu/project_space/pruning_cfails/Math/g2t/mawps-asdiv-a_svamp/imp/0.2/IMP_best_iter_0/models/graph2tree_run_mawps-asdiv-a_svamp.
+Traceback (most recent call last):
+  File "/home/sliu/miniconda3/envs/prune_cry/lib/python3.8/runpy.py", line 194, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/home/sliu/miniconda3/envs/prune_cry/lib/python3.8/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/gpfs/home6/sliu/Projects/SVAMP/code/graph2tree/src/main.py", line 1004, in <module>
+    main()
+  File "/gpfs/home6/sliu/Projects/SVAMP/code/graph2tree/src/main.py", line 608, in main
+    checkpoint = torch.load(ckpt_path, map_location=lambda storage, loc: storage)
+  File "/home/sliu/miniconda3/envs/prune_cry/lib/python3.8/site-packages/torch/serialization.py", line 594, in load
+    with _open_file_like(f, 'rb') as opened_file:
+  File "/home/sliu/miniconda3/envs/prune_cry/lib/python3.8/site-packages/torch/serialization.py", line 230, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+  File "/home/sliu/miniconda3/envs/prune_cry/lib/python3.8/site-packages/torch/serialization.py", line 211, in __init__
+    super(_open_file, self).__init__(open(name, mode))
+FileNotFoundError: [Errno 2] No such file or directory: '/home/sliu/project_space/pruning_cfails/Math/g2t/mawps-asdiv-a_svamp/imp/0.2/IMP_best_iter_0/models/graph2tree_run_mawps-asdiv-a_svamp/model.pt'
+Transfer numbers...
+keep_words 4068 / 4068 = 1.0000
+wandb: WARNING W&B installed but not logged in.  Run `wandb login` or set the WANDB_API_KEY env variable.
+2022-09-24 19:15:06,381 | INFO | main.py: 531 : main() ::	 Experiment Name: graph2tree_run_mawps-asdiv-a_svamp
+2022-09-24 19:15:06,382 | DEBUG | main.py: 532 : main() ::	 Created Relevant Directories
+2022-09-24 19:15:06,382 | INFO | main.py: 534 : main() ::	 Loading Data...
+2022-09-24 19:15:07,472 | DEBUG | main.py: 540 : main() ::	 Data Loaded...
+2022-09-24 19:15:07,472 | DEBUG | main.py: 542 : main() ::	 Number of Training Examples: 3138
+2022-09-24 19:15:07,472 | DEBUG | main.py: 543 : main() ::	 Number of Testing Examples: 1000
+2022-09-24 19:15:07,472 | DEBUG | main.py: 544 : main() ::	 Extra Numbers: ['0.01', '12.0', '1.0', '100.0', '0.1', '0.5', '3.0', '4.0', '7.0']
+2022-09-24 19:15:07,473 | DEBUG | main.py: 545 : main() ::	 Maximum Number of Numbers: 7
+2022-09-24 19:15:07,473 | INFO | main.py: 548 : main() ::	 Creating Vocab...
+2022-09-24 19:15:08,228 | DEBUG | pre_data.py: 611 : prepare_data() ::	 Indexed 4071 words in input language, 21 words in output
+2022-09-24 19:15:08,269 | WARNING | helper.py: 160 : get_latest_checkpoint() ::	 No Checkpoints Found
+2022-09-24 19:15:08,281 | DEBUG | main.py: 571 : main() ::	 Vocab saved at /home/sliu/project_space/pruning_cfails/Math/g2t/mawps-asdiv-a_svamp/omp_after_noembed/0.893/models/graph2tree_run_mawps-asdiv-a_svamp/vocab1.p
+2022-09-24 19:15:08,306 | DEBUG | main.py: 583 : main() ::	 Config File Saved
+2022-09-24 19:15:08,306 | INFO | main.py: 585 : main() ::	 Initializing Models...
+2022-09-24 19:15:11,161 | DEBUG | main.py: 602 : main() ::	 Models Initialized
+2022-09-24 19:15:11,161 | INFO | main.py: 605 : main() ::	 loading pretrained models from /home/sliu/project_space/pruning_cfails/Math/g2t/mawps-asdiv-a_svamp/imp/0.2/IMP_best_iter_0/models/graph2tree_run_mawps-asdiv-a_svamp.
+Traceback (most recent call last):
+  File "/home/sliu/miniconda3/envs/prune_cry/lib/python3.8/runpy.py", line 194, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/home/sliu/miniconda3/envs/prune_cry/lib/python3.8/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/gpfs/home6/sliu/Projects/SVAMP/code/graph2tree/src/main.py", line 1004, in <module>
+    main()
+  File "/gpfs/home6/sliu/Projects/SVAMP/code/graph2tree/src/main.py", line 608, in main
+    checkpoint = torch.load(ckpt_path, map_location=lambda storage, loc: storage)
+  File "/home/sliu/miniconda3/envs/prune_cry/lib/python3.8/site-packages/torch/serialization.py", line 594, in load
+    with _open_file_like(f, 'rb') as opened_file:
+  File "/home/sliu/miniconda3/envs/prune_cry/lib/python3.8/site-packages/torch/serialization.py", line 230, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+  File "/home/sliu/miniconda3/envs/prune_cry/lib/python3.8/site-packages/torch/serialization.py", line 211, in __init__
+    super(_open_file, self).__init__(open(name, mode))
+FileNotFoundError: [Errno 2] No such file or directory: '/home/sliu/project_space/pruning_cfails/Math/g2t/mawps-asdiv-a_svamp/imp/0.2/IMP_best_iter_0/models/graph2tree_run_mawps-asdiv-a_svamp/model.pt'
+Transfer numbers...
+keep_words 4068 / 4068 = 1.0000
+
+JOB STATISTICS
+==============
+Job ID: 1582888
+Cluster: snellius
+User/Group: sliu/sliu
+State: COMPLETED (exit code 0)
+Nodes: 1
+Cores per node: 18
+CPU Utilized: 00:01:49
+CPU Efficiency: 7.30% of 00:24:54 core-walltime
+Job Wall-clock time: 00:01:23
+Memory Utilized: 373.33 MB
+Memory Efficiency: 0.00% of 0.00 MB
