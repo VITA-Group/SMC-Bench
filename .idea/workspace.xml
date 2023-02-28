@@ -2,52 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b73e5e45-9a29-41dc-9d8a-91d0cb358be0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/TRAINING.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Commonsense_Reasoning/scripts/dense_script" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Arithmetic_Reasoning/code/gts/scripts/asdiv_gmp" beforeDir="false" afterPath="$PROJECT_DIR$/Arithmetic_Reasoning/code/gts/scripts/asdiv_gmp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Arithmetic_Reasoning/code/rnn_seq2seq/rnn_seq2seq_asdiv_full_dense.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Arithmetic_Reasoning/code/rnn_seq2seq/scripts/SVAMP_Dense" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Arithmetic_Reasoning/code/rnn_seq2seq/scripts/asdiv_Dense" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Arithmetic_Reasoning/code/rnn_seq2seq/scripts/mawps_Dense" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Arithmetic_Reasoning/code/rnn_seq2seq/setup.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Arithmetic_Reasoning/code/rnn_seq2seq/src/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Arithmetic_Reasoning/code/rnn_seq2seq/src/args.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Arithmetic_Reasoning/code/rnn_seq2seq/src/components/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Arithmetic_Reasoning/code/rnn_seq2seq/src/components/attention.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Arithmetic_Reasoning/code/rnn_seq2seq/src/components/contextual_embeddings.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Arithmetic_Reasoning/code/rnn_seq2seq/src/components/decoder.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Arithmetic_Reasoning/code/rnn_seq2seq/src/components/encoder.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Arithmetic_Reasoning/code/rnn_seq2seq/src/components/readme.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Arithmetic_Reasoning/code/rnn_seq2seq/src/confidence_estimation.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Arithmetic_Reasoning/code/rnn_seq2seq/src/dataloader.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Arithmetic_Reasoning/code/rnn_seq2seq/src/main.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Arithmetic_Reasoning/code/rnn_seq2seq/src/model.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Arithmetic_Reasoning/code/rnn_seq2seq/src/modelv2.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Arithmetic_Reasoning/code/rnn_seq2seq/src/outputs.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Arithmetic_Reasoning/code/rnn_seq2seq/src/utils/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Arithmetic_Reasoning/code/rnn_seq2seq/src/utils/bleu.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Arithmetic_Reasoning/code/rnn_seq2seq/src/utils/eq_preprocessing.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Arithmetic_Reasoning/code/rnn_seq2seq/src/utils/evaluate.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Arithmetic_Reasoning/code/rnn_seq2seq/src/utils/helper.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Arithmetic_Reasoning/code/rnn_seq2seq/src/utils/logger.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Arithmetic_Reasoning/code/rnn_seq2seq/src/utils/sentence_processing.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Arithmetic_Reasoning/code/transformer_seq2seq/scripts/SVAMP_Dense" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Arithmetic_Reasoning/code/transformer_seq2seq/setup.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Arithmetic_Reasoning/code/transformer_seq2seq/src/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Arithmetic_Reasoning/code/transformer_seq2seq/src/args.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Arithmetic_Reasoning/code/transformer_seq2seq/src/components/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Arithmetic_Reasoning/code/transformer_seq2seq/src/components/contextual_embeddings.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Arithmetic_Reasoning/code/transformer_seq2seq/src/dataloader.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Arithmetic_Reasoning/code/transformer_seq2seq/src/main.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Arithmetic_Reasoning/code/transformer_seq2seq/src/model.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Arithmetic_Reasoning/code/transformer_seq2seq/src/utils/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Arithmetic_Reasoning/code/transformer_seq2seq/src/utils/bleu.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Arithmetic_Reasoning/code/transformer_seq2seq/src/utils/evaluate.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Arithmetic_Reasoning/code/transformer_seq2seq/src/utils/helper.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Arithmetic_Reasoning/code/transformer_seq2seq/src/utils/logger.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Arithmetic_Reasoning/code/transformer_seq2seq/src/utils/sentence_processing.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Commonsense_Reasoning/examples/roberta/commonsense_qa/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/Commonsense_Reasoning/examples/roberta/commonsense_qa/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/INSTALL.md" beforeDir="false" afterPath="$PROJECT_DIR$/INSTALL.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
