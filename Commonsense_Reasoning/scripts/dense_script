@@ -12,7 +12,7 @@ FAIRSEQ_PATH=./
 FAIRSEQ_USER_DIR=${FAIRSEQ_PATH}/examples/roberta/commonsense_qa
 save_dir=/ssd1/shiwei/SMC/dense_finetuning/
 
-CUDA_VISIBLE_DEVICES=0 fairseq-train --ddp-backend=legacy_ddp \
+CUDA_VISIBLE_DEVICES=0 python train_oneshot_sparsify.py --ddp-backend=legacy_ddp \
     $DATA_DIR  --save-dir $save_dir  \
     --user-dir $FAIRSEQ_USER_DIR \
     --restore-file $ROBERTA_PATH \
