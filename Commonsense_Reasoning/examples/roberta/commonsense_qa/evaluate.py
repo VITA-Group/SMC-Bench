@@ -39,7 +39,7 @@ for method in ['oneshot_oBERT_noft/', 'oneshot_oBERT_finetuning/']:
         roberta.cuda()  # use the GPU (optional)
         nsamples, ncorrect = 0, 0
 
-        with open('/home/sliu/Projects/fairseq/data/CommonsenseQA/valid.jsonl') as h:
+        with open('/home/shiwei/Projects/SMC-Bench/Commonsense_Reasoning/data/CommonsenseQA/valid.jsonl') as h:
             for line in h:
                 example = json.loads(line)
                 scores = []
