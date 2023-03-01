@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b73e5e45-9a29-41dc-9d8a-91d0cb358be0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Commonsense_Reasoning/fairseq_cli/train_oneshot_sparsify_noft.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Commonsense_Reasoning/fairseq_cli/train_oneshot_sparsify_noft.py" beforeDir="false" afterPath="$PROJECT_DIR$/Commonsense_Reasoning/fairseq_cli/train_oneshot_sparsify_noft.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,16 +26,16 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "/Users/shiwei/Projects/SMC-Bench/Commonsense_Reasoning/fairseq_cli"
+    "last_opened_file_path": "/Users/shiwei/Projects/SMC-Bench/Commonsense_Reasoning/scripts"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/Commonsense_Reasoning/fairseq_cli" />
       <recent name="$PROJECT_DIR$/Commonsense_Reasoning/scripts" />
+      <recent name="$PROJECT_DIR$/Commonsense_Reasoning" />
+      <recent name="$PROJECT_DIR$/Commonsense_Reasoning/fairseq_cli" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/CommonsenseQA" />
-      <recent name="$PROJECT_DIR$/Commonsense_Reasoning" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />

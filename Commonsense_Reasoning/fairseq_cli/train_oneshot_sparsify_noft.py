@@ -449,7 +449,7 @@ def train(
     logger.info("Start iterating over samples")
 
     valid_losses, should_stop = validate_and_save(
-        cfg, trainer, task, epoch_itr, valid_subsets, Ture
+        cfg, trainer, task, epoch_itr, valid_subsets, True
     )
 
     # for i, samples in enumerate(progress):
