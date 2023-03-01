@@ -23,11 +23,12 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "/Users/shiwei/Projects/SMC-Bench/Commonsense_Reasoning/scripts"
+    "last_opened_file_path": "/Users/shiwei/Projects/SMC-Bench/Commonsense_Reasoning/fairseq_cli"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Commonsense_Reasoning/fairseq_cli" />
       <recent name="$PROJECT_DIR$/Commonsense_Reasoning/scripts" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/CommonsenseQA" />
