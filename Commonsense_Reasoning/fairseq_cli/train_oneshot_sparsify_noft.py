@@ -451,6 +451,7 @@ def train(
     valid_losses, should_stop = validate_and_save(
         cfg, trainer, task, epoch_itr, valid_subsets, True
     )
+    should_stop = True
 
     # for i, samples in enumerate(progress):
     #     with metrics.aggregate("train_inner"), torch.autograd.profiler.record_function(
