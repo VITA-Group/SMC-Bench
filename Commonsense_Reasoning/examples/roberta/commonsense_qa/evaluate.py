@@ -10,14 +10,11 @@ def sorted_nicely(l):
     alphanum_key = lambda key: [ convert(c) for c in re.split('([0-9]+)', key) ]
     return sorted(l, key = alphanum_key)
 
-list = ['lr104/300/5epochs/', 'lr104/600/5epochs/', 'lr105/300/5epochs/', 'lr105/600/5epochs/', 'lr505/300/5epochs/', 'lr505/600/5epochs/', 'lr506/300/5epochs/', 'lr506/600/5epochs/',
-               'lr104/300/10epochs/', 'lr104/600/10epochs/', 'lr105/300/10epochs/', 'lr105/600/10epochs/', 'lr505/300/10epochs/', 'lr505/600/10epochs/', 'lr506/300/10epochs/', 'lr506/600/10epochs/']
 
-print(f'Evaluation list is {list}')
 
-check_point_folder_source = '/home/sliu/project_space/pruning_fails/QA/robert/commonsenseqa/'
+check_point_folder_source = '/ssd1/shiwei/SMC/'
 
-for method in ['obert_after_noemb_noclassifier_LRR/']:
+for method in ['oneshot_oBERT_noft/', 'oneshot_oBERT_finetuning/']:
 
     check_point_folder = check_point_folder_source + method
     # model_files = [0.5]
