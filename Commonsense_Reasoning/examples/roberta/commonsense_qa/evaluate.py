@@ -1,7 +1,7 @@
 import json
 import torch
 from fairseq.models.roberta import RobertaModel
-from examples.roberta import commonsense_qa  # load the Commonsense QA task
+from .examples.roberta import commonsense_qa  # load the Commonsense QA task
 import os, re
 
 def sorted_nicely(l):
