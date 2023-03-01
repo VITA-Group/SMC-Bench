@@ -27,7 +27,7 @@ FAIRSEQ_PATH=./
 FAIRSEQ_USER_DIR=${FAIRSEQ_PATH}/examples/roberta/commonsense_qa
 
 
-for sparsity in 0.2 0.36 0.488 0.590 0.672 0.738 0.791 0.8325 0.866 0.893
+for sparsity in 0.2
 do
 save_dir=/ssd1/shiwei/SMC/dense_finetuning/
 CUDA_VISIBLE_DEVICES=7 python train_oneshot_sparsify.py --ddp-backend=legacy_ddp \
