@@ -13,7 +13,7 @@ source /home/sliu/miniconda3/etc/profile.d/conda.sh
 source activate prune_cry
 
 
-MAX_UPDATES=3000      # Number of training steps.
+MAX_UPDATES=100      # Number of training steps.
 WARMUP_UPDATES=150    # Linearly increase LR over this many steps.
 LR=1e-05              # Peak LR for polynomial LR scheduler.
 MAX_SENTENCES=16      # Batch size.
