@@ -561,7 +561,7 @@ class Masking(object):
         self._trainer = trainer
         self._progress = progress
         self._num_grads = len(progress)
-        self._fisher_block_size = 10
+        self._fisher_block_size = 1
         self._damp = 1e-07
         for name in self.masks:
             self._finvs.append(EmpiricalBlockFisherInverse(self._num_grads, self._fisher_block_size, self.masks[name].numel(), self._damp, self.device))
