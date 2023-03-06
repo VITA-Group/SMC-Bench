@@ -30,7 +30,7 @@ MAX_UPDATES=3000      # Number of training steps.
 WARMUP_UPDATES=150    # Linearly increase LR over this many steps.
 LR=1e-05              # Peak LR for polynomial LR scheduler.
 MAX_SENTENCES=16      # Batch size.
-SEED=1                # Random seed.
+SEED=0                # Random seed.
 ROBERTA_PATH=/path/to/roberta.large/model.pt
 DATA_DIR=data/CommonsenseQA
 
@@ -69,7 +69,7 @@ MAX_UPDATES=3000      # Number of training steps.
 WARMUP_UPDATES=150    # Linearly increase LR over this many steps.
 LR=1e-05              # Peak LR for polynomial LR scheduler.
 MAX_SENTENCES=16      # Batch size.
-SEED=1                # Random seed.
+SEED=0                # Random seed.
 ROBERTA_PATH=/path/to/roberta.large/model.pt
 DATA_DIR=data/CommonsenseQA
 
@@ -110,7 +110,7 @@ MAX_UPDATES=3000      # Number of training steps.
 WARMUP_UPDATES=150    # Linearly increase LR over this many steps.
 LR=1e-05              # Peak LR for polynomial LR scheduler.
 MAX_SENTENCES=16      # Batch size.
-SEED=1                # Random seed.
+SEED=0                # Random seed.
 ROBERTA_PATH=/path/to/dense_finetuned_model    # change pretrained model to the dense finetuned one for post-training pruning   
 DATA_DIR=data/CommonsenseQA
 
@@ -151,7 +151,7 @@ MAX_UPDATES=3000      # Number of training steps.
 WARMUP_UPDATES=150    # Linearly increase LR over this many steps.
 LR=1e-05              # Peak LR for polynomial LR scheduler.
 MAX_SENTENCES=16      # Batch size.
-SEED=1                # Random seed.
+SEED=0                # Random seed.
 ROBERTA_PATH=/path/to/dense_finetuned_model    # change pretrained model to the dense finetuned one for post-training pruning  
 DATA_DIR=data/CommonsenseQA
 
@@ -193,7 +193,7 @@ MAX_UPDATES=3000      # Number of training steps.
 WARMUP_UPDATES=150    # Linearly increase LR over this many steps.
 LR=1e-05              # Peak LR for polynomial LR scheduler.
 MAX_SENTENCES=16      # Batch size.
-SEED=1                # Random seed.
+SEED=0                # Random seed.
 ROBERTA_PATH=/path/to/roberta.large/model.pt
 DATA_DIR=data/CommonsenseQA
 
@@ -235,7 +235,7 @@ MAX_UPDATES=3000      # Number of training steps.
 WARMUP_UPDATES=150    # Linearly increase LR over this many steps.
 LR=1e-05              # Peak LR for polynomial LR scheduler.
 MAX_SENTENCES=16      # Batch size.
-SEED=1                # Random seed.
+SEED=0                # Random seed.
 ROBERTA_PATH=/path/to/roberta.large/model.pt
 DATA_DIR=data/CommonsenseQA
 
@@ -277,7 +277,7 @@ MAX_UPDATES=3000      # Number of training steps.
 WARMUP_UPDATES=150    # Linearly increase LR over this many steps.
 LR=1e-05              # Peak LR for polynomial LR scheduler.
 MAX_SENTENCES=16      # Batch size.
-SEED=1                # Random seed.
+SEED=0                # Random seed.
 ROBERTA_PATH=/path/to/roberta.large/model.pt
 DATA_DIR=data/CommonsenseQA
 
@@ -318,7 +318,7 @@ MAX_UPDATES=3000      # Number of training steps.
 WARMUP_UPDATES=150    # Linearly increase LR over this many steps.
 LR=1e-05              # Peak LR for polynomial LR scheduler.
 MAX_SENTENCES=16      # Batch size.
-SEED=1                # Random seed.
+SEED=0                # Random seed.
 ROBERTA_PATH=/path/to/roberta.large/model.pt
 DATA_DIR=data/CommonsenseQA
 
@@ -360,7 +360,7 @@ MAX_UPDATES=3000      # Number of training steps.
 WARMUP_UPDATES=150    # Linearly increase LR over this many steps.
 LR=1e-05              # Peak LR for polynomial LR scheduler.
 MAX_SENTENCES=16      # Batch size.
-SEED=1                # Random seed.
+SEED=0                # Random seed.
 ROBERTA_PATH=/path/to/roberta.large/model.pt
 DATA_DIR=data/CommonsenseQA
 
@@ -401,7 +401,7 @@ MAX_UPDATES=3000      # Number of training steps.
 WARMUP_UPDATES=150    # Linearly increase LR over this many steps.
 LR=1e-05              # Peak LR for polynomial LR scheduler.
 MAX_SENTENCES=16      # Batch size.
-SEED=1                # Random seed.
+SEED=0                # Random seed.
 ROBERTA_PATH=/path/to/roberta.large/model.pt
 DATA_DIR=data/CommonsenseQA
 
@@ -443,7 +443,7 @@ MAX_UPDATES=3000      # Number of training steps.
 WARMUP_UPDATES=150    # Linearly increase LR over this many steps.
 LR=1e-05              # Peak LR for polynomial LR scheduler.
 MAX_SENTENCES=16      # Batch size.
-SEED=1                # Random seed.
+SEED=0                # Random seed.
 ROBERTA_PATH=/path/to/roberta.large/model.pt
 DATA_DIR=data/CommonsenseQA
 

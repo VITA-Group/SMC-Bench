@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b73e5e45-9a29-41dc-9d8a-91d0cb358be0" name="Changes" comment="" />
+    <list default="true" id="b73e5e45-9a29-41dc-9d8a-91d0cb358be0" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/Commonsense_Reasoning/examples/roberta/commonsense_qa/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/Commonsense_Reasoning/examples/roberta/commonsense_qa/README.md" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,13 +21,13 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "/Users/shiwei/Projects/SMC-Bench/Commonsense_Reasoning/scripts"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/shiwei/Projects/SMC-Bench/Commonsense_Reasoning/scripts&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/Commonsense_Reasoning/scripts" />
