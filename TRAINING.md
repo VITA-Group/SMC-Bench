@@ -17,5 +17,7 @@ More specifially, we need to
 5. Densely or sparsely finetuning with the commands provided [here](Commonsense_Reasoning/examples/roberta/commonsense_qa/README.md).
 
 ### WinoGrande 
+The dense training on WinoGrande dataset can be found [here](https://github.com/VITA-Group/SMC-Bench/tree/main/Commonsense_Reasoning/examples/roberta/wsc#roberta-training-on-winogrande-dataset). To enable sparse training, or pruning, just follow the commands of [CommonsenseQA](Commonsense_Reasoning/examples/roberta/commonsense_qa/README.md).
 
 ### RACE 
+The dense training on WinoGrande dataset can be found [here](https://github.com/VITA-Group/SMC-Bench/blob/main/Commonsense_Reasoning/examples/roberta/README.race.md). To enable sparse training, or pruning, just follow the commands of [CommonsenseQA](Commonsense_Reasoning/examples/roberta/commonsense_qa/README.md).
