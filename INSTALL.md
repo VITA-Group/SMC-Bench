@@ -19,7 +19,7 @@ Commonsense Reasoning and Multilingual Translation are highly relied on the impl
 * Python version >= 3.6
 * **To install fairseq** and develop locally:
 
-``` bash
+``` 
 conda create -n SMC python=3.8 -y
 conda activate SMC
 conda install pytorch==1.10.0 torchvision==0.11.0 torchaudio==0.10.0 cudatoolkit=11.3 -c pytorch -c conda-forge
@@ -30,7 +30,29 @@ pip install requests
 
 ```
 
-# Arithmatic Reasoning (coming soon) 
+# Arithmatic Reasoning  
 
-Arithmetic Reasoning is implemented based on [SVAMP](https://github.com/arkilpatel/SVAMP).
+Arithmetic Reasoning is implemented based on [SVAMP](https://github.com/arkilpatel/SVAMP). 
 
+## Requirements and Installation：
+
+```
+cd SMC-Bench/Arithmetic_Reasoning/code/
+pip install -r requirements.txt 
+``` 
+we might meet the following error  
+```
+Resource punkt not found.
+Please use the NLTK Downloader to obtain the resource:
+```
+To solve this, run the commands below:
+```
+python
+>>> import nltk
+>>> nltk.download('punkt')
+>>> quit()
+```
+If we encouter the no transpose attreibute error, i.e., "AttributeError: 'str' object has no attribute 'transpose'", we need to ajust the version of transformers. For instance, transformers==3.4.0 works for me. 
+```
+pip install  transformers==3.4.0 
+```
