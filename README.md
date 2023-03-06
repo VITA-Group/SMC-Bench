@@ -14,13 +14,21 @@ The benchmark organizers can be contacted at s.liu@tue.nl.
 Table of contents
 * [Installation](#installation-of-smc-bench)
 * [Training](#training-of-smc-bench)
-
+* [Evaluated Sparse Algorithms](#sparse-algorithms)
+* [Tasks, Datasets, and Models](#tasks-models-and-datasets)
+* [Results](#results)
 --- 
 <p align="center">
 <img src="https://github.com/VITA-Group/SMC-Bench/blob/main/Images/stay-tuned.png" width="600" height="350">
 </p>
 
-## Tasks, Models, and Datasets
+## Installation of SMC-Bench   
+Please check [INSTALL.md](INSTALL.md) for installation instructinos.
+
+## Training of SMC-Bench   
+Please check [TRAINING.md](TRAINING.md) for installation instructinos.
+
+## Tasks Models and Datasets
 Specifically, we consider a broad set of tasks including *commonsense reasoning, arithmatic reasoning, multilingual translation, and protein prediction*, whose content spans multiple domains, requiring a vast amount of commonsense knowledge, solid mathematical and scientific background to solve. Note that none of the datasets in SMC-Bench has been created from scratch for the benchmark, we rely on pre-existing datasets as they have been implicitly agreed by researchers as challenging, interesting, and of high practical value.  The models and datasets that we used for SMC-Bench are summarized below. 
 
 --- 
@@ -35,7 +43,7 @@ Specifically, we consider a broad set of tasks including *commonsense reasoning,
 
 *Before Training*: [Magnitude Before Training](https://arxiv.org/abs/2009.08576), [SNIP](https://arxiv.org/abs/1810.02340), [Rigging the Lottery](https://arxiv.org/abs/1911.11134), [Random Before Training](https://arxiv.org/abs/2202.02643).
 
-## Evaluation
+## Results
 
 Commonsense Reasoning
 --- 
@@ -61,8 +69,4 @@ Multilingual Translation
 <img src="https://github.com/VITA-Group/SMC-Bench/blob/main/Images/Multilingual_translation.png" width="800" height="250">
 </p>
 
-## Installation of SMC-Bench   
-Please check [INSTALL.md](INSTALL.md) for installation instructinos.
 
-## Training of SMC-Bench   
-Please check [TRAINING.md](TRAINING.md) for installation instructinos.
