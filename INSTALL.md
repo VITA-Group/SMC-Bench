@@ -56,3 +56,7 @@ If we encouter the no transpose attreibute error, i.e., "AttributeError: 'str' o
 ```
 pip install  transformers==3.4.0 
 ```
+
+# Multilingual Translation (Comming soon)
+
+# Protein Prediction (Comming soon)
