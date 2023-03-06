@@ -26,6 +26,7 @@ conda install pytorch==1.10.0 torchvision==0.11.0 torchaudio==0.10.0 cudatoolkit
 git clone https://github.com/VITA-Group/SMC-Bench.git
 cd SMC-Bench/Commonsense_Reasoning/
 pip install --editable ./
+pip install requests
 
 ```
 
