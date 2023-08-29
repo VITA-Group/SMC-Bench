@@ -18,9 +18,6 @@ Table of contents
 * [Tasks, Datasets, and Models](#tasks-models-and-datasets)
 * [Results](#results)
 --- 
-<p align="center">
-<img src="https://github.com/VITA-Group/SMC-Bench/blob/main/Images/stay-tuned.png" width="600" height="350">
-</p>
 
 ## Installation of SMC-Bench   
 Please check [INSTALL.md](INSTALL.md) for installation instructinos.
